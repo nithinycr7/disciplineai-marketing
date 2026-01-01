@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Check, Zap, BarChart, MessageSquare } from "lucide-react";
+import { ArrowRight, Check, Zap, BarChart, MessageSquare, BrainCircuit, LineChart, Bot } from "lucide-react";
 import { WhatsAppMock } from "@/components/WhatsAppMock";
 import { Stats } from "@/components/Stats";
 import { siteConfig, VERTICALS } from "@/config/site";
@@ -27,8 +27,8 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-xl text-zinc-400 mb-8 max-w-lg leading-relaxed">
-                Log in 30 seconds. Get nudged. Stay consistent.
-                Receive weekly reality reports straight to your chat.
+                AI-powered tracking. Deep behavioral analysis. Unbreakable discipline.
+                The only study partner that lives in your chat and keeps you consistent.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -65,11 +65,107 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pain Points Section */}
+      <section className="py-20 bg-black border-y border-zinc-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Why Most Aspirants Fail</h2>
+            <p className="text-zinc-500">It's not lack of talent. It's lack of system.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Pain Point 1: Manual Tracking */}
+            <div className="p-8 rounded-3xl bg-zinc-900/30 border border-zinc-800 hover:border-red-900/50 transition-colors group">
+              <div className="w-12 h-12 rounded-2xl bg-red-950/30 flex items-center justify-center mb-6 border border-red-900/20 group-hover:scale-110 transition-transform">
+                <BarChart className="w-6 h-6 text-red-500" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-3">Manual Tracking is Broken</h3>
+              <p className="text-zinc-400 leading-relaxed text-base">
+                Excel sheets are boring. Apps are distracting. Notebooks get lost.
+                <br /><br />
+                <span className="text-zinc-300 font-medium">The Problem:</span> You start with enthusiasm, but by Day 4, you forget to log. By Day 10, you stop tracking entirely.
+              </p>
+            </div>
+
+            {/* Pain Point 2: The Lonely Battle */}
+            <div className="p-8 rounded-3xl bg-zinc-900/30 border border-zinc-800 hover:border-amber-900/50 transition-colors group">
+              <div className="w-12 h-12 rounded-2xl bg-amber-950/30 flex items-center justify-center mb-6 border border-amber-900/20 group-hover:scale-110 transition-transform">
+                <MessageSquare className="w-6 h-6 text-amber-500" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-3">The Lonely Marathon</h3>
+              <p className="text-zinc-400 leading-relaxed text-base">
+                Studying for 8 hours alone is mentally draining. There's no one to clap when you finish a chapter.
+                <br /><br />
+                <span className="text-zinc-300 font-medium">The Problem:</span> Isolation breeds inconsistency. You need a "Study Buddy" that's always awake, strictly professional, and brutally honest.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Now / AI Section */}
+      <section className="py-24 bg-zinc-950 relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-semibold uppercase tracking-wider text-cyan-500 bg-cyan-950/30 border border-cyan-900/50 rounded-full">
+              <Zap className="w-3 h-3" /> The AI Advantage
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why It's <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Imminent Now</span>
+            </h2>
+            <p className="text-zinc-400 max-w-2xl mx-auto text-lg">
+              The old methods of discipline are obsolete. We use advanced AI to turn your behavior into data, and data into success.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Feature 1: AI Driven Analysis */}
+            <div className="relative group p-8 rounded-3xl bg-zinc-900/40 border border-zinc-800 hover:border-cyan-500/30 transition-all duration-300">
+              <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="w-14 h-14 rounded-2xl bg-zinc-800/50 flex items-center justify-center mb-6 text-cyan-500 group-hover:scale-110 transition-transform duration-300">
+                <BrainCircuit className="w-7 h-7" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">AI-Driven Analysis</h3>
+              <p className="text-zinc-400 leading-relaxed">
+                We don't just log hours. Our AI decodes <em>how</em> you study. It detects burnout patterns, subject neglect, and efficiency drops before you even realize them.
+              </p>
+            </div>
+
+            {/* Feature 2: Predictive Behavior */}
+            <div className="relative group p-8 rounded-3xl bg-zinc-900/40 border border-zinc-800 hover:border-purple-500/30 transition-all duration-300">
+              <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="w-14 h-14 rounded-2xl bg-zinc-800/50 flex items-center justify-center mb-6 text-purple-500 group-hover:scale-110 transition-transform duration-300">
+                <LineChart className="w-7 h-7" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Predictive Behavior</h3>
+              <p className="text-zinc-400 leading-relaxed">
+                Stop guessing what to revise. Our predictive models analyze your retention curves to forecast exactly what you need to study next week to maximize scores.
+              </p>
+            </div>
+
+            {/* Feature 3: Mentor & Motivator */}
+            <div className="relative group p-8 rounded-3xl bg-zinc-900/40 border border-zinc-800 hover:border-amber-500/30 transition-all duration-300">
+              <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-amber-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="w-14 h-14 rounded-2xl bg-zinc-800/50 flex items-center justify-center mb-6 text-amber-500 group-hover:scale-110 transition-transform duration-300">
+                <Bot className="w-7 h-7" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">24/7 AI Mentor</h3>
+              <p className="text-zinc-400 leading-relaxed">
+                A mentor that never sleeps. Whether it's 5 AM motivation or 11 PM accountability, your personalized AI coach is always awake to push you forward.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section >
+
       {/* Stats */}
-      <Stats />
+      < Stats />
 
       {/* How it Works */}
-      <section id="how-it-works" className="py-24 bg-zinc-950 relative">
+      < section id="how-it-works" className="py-24 bg-zinc-950 relative" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">No App to Install. Just WhatsApp.</h2>
@@ -107,10 +203,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Verticals */}
-      <section className="py-24 bg-black relative">
+      < section className="py-24 bg-black relative" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Choose Your Discipline</h2>
@@ -159,10 +255,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Pricing */}
-      <section className="py-24 bg-zinc-950">
+      < section className="py-24 bg-zinc-950" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Simple Pricing</h2>
@@ -207,10 +303,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* FAQ */}
-      <section className="py-24 bg-black">
+      < section className="py-24 bg-black" >
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>
           <div className="space-y-6">
@@ -227,10 +323,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Final CTA */}
-      <section className="py-24 relative overflow-hidden">
+      < section className="py-24 relative overflow-hidden" >
         <div className="absolute inset-0 bg-primary/10"></div>
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to get serious?</h2>
@@ -244,7 +340,7 @@ export default function Home() {
             Start Your Trial on WhatsApp
           </Link>
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
   );
 }

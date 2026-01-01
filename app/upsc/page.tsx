@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { ArrowRight, Check, BookOpen, Brain, Target } from "lucide-react";
+import { ArrowRight, Check, BookOpen, Brain, Target, TrendingUp, Trophy } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { WhatsAppMock } from "@/components/WhatsAppMock";
+import { WeeklyReportCard } from "@/components/WeeklyReportCard";
 
 export default function UPSCPage() {
     return (
@@ -31,6 +32,50 @@ export default function UPSCPage() {
                         <div className="relative">
                             <div className="absolute inset-0 bg-primary/20 blur-3xl -z-10 rounded-full opacity-50"></div>
                             <WhatsAppMock />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Weekly Report Showcase */}
+            <section className="py-24 bg-zinc-950 border-y border-zinc-900">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="flex flex-col md:flex-row items-center gap-16">
+                        <div className="flex-1 order-2 md:order-1 flex justify-center">
+                            <div className="transform rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
+                                <WeeklyReportCard />
+                            </div>
+                        </div>
+                        <div className="flex-1 order-1 md:order-2">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-sm font-medium text-cyan-400 bg-cyan-400/10 rounded-full">
+                                <TrendingUp className="w-4 h-4" /> Weekly Reality Check
+                            </div>
+                            <h2 className="text-4xl font-bold text-white mb-6">
+                                The Report Card <br />
+                                <span className="text-zinc-500">You Can't Ignore.</span>
+                            </h2>
+                            <p className="text-lg text-zinc-400 mb-8 leading-relaxed">
+                                Every Sunday, you get a detailed breakdown of your week.
+                                We visualize your effort across subjects so you can spot gaps immediately.
+                                <br /><br />
+                                <span className="text-white font-medium">History is strong, but what about Ethics?</span>
+                                <br />
+                                Our report reflects the mirror you need to see.
+                            </p>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="flex items-center gap-3 text-zinc-300">
+                                    <div className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center">
+                                        <Trophy className="w-4 h-4 text-amber-500" />
+                                    </div>
+                                    <span className="text-sm">Subject-wise Breakdown</span>
+                                </div>
+                                <div className="flex items-center gap-3 text-zinc-300">
+                                    <div className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center">
+                                        <Target className="w-4 h-4 text-cyan-500" />
+                                    </div>
+                                    <span className="text-sm">Target vs Achieved</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
