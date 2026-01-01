@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Check, BookOpen, Brain, Target, TrendingUp, Trophy, CheckCircle, Bell, Calendar, Award } from "lucide-react";
+import { ArrowRight, Check, BookOpen, Brain, Target, TrendingUp, Trophy, CheckCircle, Bell, Calendar, Award, MessageSquare, Sun, AlertTriangle, Zap, Star } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { WhatsAppMock } from "@/components/WhatsAppMock";
 import { WeeklyReportCard } from "@/components/WeeklyReportCard";
@@ -15,11 +15,13 @@ export default function UPSCPage() {
                             For Serious Aspirants
                         </div>
                         <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                            Master the <span className="text-primary">UPSC Marathon</span>.
+                            Stop Just "Studying". <br />
+                            <span className="text-primary">Start Training to Win.</span>
                         </h1>
                         <p className="text-xl text-zinc-400 mb-8 leading-relaxed">
-                            No content. No distractions. Just pure tracking of your study hours, revision cycles, and answer writing practice.
-                            Delivered on WhatsApp.
+                            The first WhatsApp-native AI tracker that turns your raw study logs into powerful insights, discipline, and strategy.
+                            <br /><br />
+                            <span className="text-zinc-500 text-lg">"Cracking UPSC isn't about hours. It's about consistency and strategy. DISCIPLINE.AI automates both directly on WhatsApp."</span>
                         </p>
                         <Link
                             href={siteConfig.links.whatsapp}
@@ -81,24 +83,64 @@ export default function UPSCPage() {
                 </div>
             </section>
 
-            {/* Features */}
+            {/* Key Features (The "Why") */}
             <section className="py-24 bg-zinc-950">
                 <div className="max-w-7xl mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="p-8 rounded-3xl bg-zinc-900 border border-zinc-800">
-                            <BookOpen className="w-10 h-10 text-primary mb-6" />
-                            <h3 className="text-xl font-bold text-white mb-3">Syllabus Tracking</h3>
-                            <p className="text-zinc-400">Log "Polity", "Geography", "Ethics". We normalize it against GS1-4 papers automatically.</p>
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-bold text-white mb-4">The System that Wins</h2>
+                        <p className="text-zinc-400">Built to solve the specific behavioral problems of UPSC aspirants.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* 1. Smart Logging */}
+                        <div className="p-8 rounded-3xl bg-zinc-900 border border-zinc-800 hover:border-primary/30 transition-all">
+                            <MessageSquare className="w-10 h-10 text-primary mb-6" />
+                            <h3 className="text-2xl font-bold text-white mb-3">1. Smart Logging (No Data Entry)</h3>
+                            <p className="text-zinc-400 leading-relaxed mb-4">
+                                Forget complex apps. Just text us like a friend. "Studied Polity for 2 hours, covered Directive Principles."
+                                <br /><br />
+                                We handle the rest: Our AI instantly categorizes it, maps it to the UPSC syllabus, and updates your stats. Frictionless.
+                            </p>
                         </div>
-                        <div className="p-8 rounded-3xl bg-zinc-900 border border-zinc-800">
-                            <Brain className="w-10 h-10 text-primary mb-6" />
-                            <h3 className="text-xl font-bold text-white mb-3">Revision Management</h3>
-                            <p className="text-zinc-400">Our AI reminds you if you haven't touched a subject in 2 weeks. Spaced repetition made simple.</p>
+
+                        {/* 2. Morning Scorecard */}
+                        <div className="p-8 rounded-3xl bg-zinc-900 border border-zinc-800 hover:border-amber-500/30 transition-all">
+                            <Sun className="w-10 h-10 text-amber-500 mb-6" />
+                            <h3 className="text-2xl font-bold text-white mb-3">2. The "Morning Scorecard"</h3>
+                            <p className="text-zinc-400 leading-relaxed mb-4">
+                                Start every day with momentum. Wake up to a personalized report:
+                            </p>
+                            <ul className="space-y-2 text-zinc-500 text-sm bg-black/30 p-4 rounded-xl">
+                                <li className="flex gap-2"><span>📊</span> Yesterday's Reality: "You studied 7.5h (Goal: 8h)."</li>
+                                <li className="flex gap-2"><span>📈</span> Syllabus Tracking: "Great progress on Environment!"</li>
+                                <li className="flex gap-2"><span>🤖</span> AI Nuance: "You've ignored History for 3 days. Let's fix that today."</li>
+                            </ul>
                         </div>
-                        <div className="p-8 rounded-3xl bg-zinc-900 border border-zinc-800">
-                            <Target className="w-10 h-10 text-primary mb-6" />
-                            <h3 className="text-xl font-bold text-white mb-3">Daily Accountability</h3>
-                            <p className="text-zinc-400">06:00 AM Prompt: "What's the plan?" <br /> 10:30 PM Check-in: "What did you achieve?"</p>
+
+                        {/* 3. Strategic Review */}
+                        <div className="p-8 rounded-3xl bg-zinc-900 border border-zinc-800 hover:border-cyan-500/30 transition-all">
+                            <Zap className="w-10 h-10 text-cyan-500 mb-6" />
+                            <h3 className="text-2xl font-bold text-white mb-3">3. Weekly "Strategic Review"</h3>
+                            <p className="text-zinc-400 leading-relaxed mb-4">
+                                Don't just work hard. Work smart. Every Sunday, receive a comprehensive performance review:
+                            </p>
+                            <ul className="space-y-2 text-zinc-500 text-sm bg-black/30 p-4 rounded-xl">
+                                <li className="flex gap-2"><span>🗺️</span> Subject Mastery Heatmap: See exactly where you are strong (Polity) and weak (Economics).</li>
+                                <li className="flex gap-2"><span>🔥</span> Consistency Score: Valid streak tracking.</li>
+                                <li className="flex gap-2"><span>🧠</span> AI Coach Feedback: "Strategy for next week: 2 hours of revision every morning."</li>
+                            </ul>
+                        </div>
+
+                        {/* 4. Intelligent Nudges */}
+                        <div className="p-8 rounded-3xl bg-zinc-900 border border-zinc-800 hover:border-rose-500/30 transition-all">
+                            <AlertTriangle className="w-10 h-10 text-rose-500 mb-6" />
+                            <h3 className="text-2xl font-bold text-white mb-3">4. Intelligent Nudges</h3>
+                            <p className="text-zinc-400 leading-relaxed mb-4">
+                                We know when you're slacking before you do.
+                            </p>
+                            <ul className="space-y-2 text-zinc-500 text-sm bg-black/30 p-4 rounded-xl">
+                                <li className="flex gap-2"><span>🌙</span> <b>The "Evening Check-in":</b> Haven't logged by 9 PM? We gently nudge you to ensure a non-zero day.</li>
+                                <li className="flex gap-2"><span>⚠️</span> <b>The "Binge Alert":</b> "Warning: You're over-investing in Geography. Switch to CSAT to balance your risk."</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -217,6 +259,104 @@ export default function UPSCPage() {
                                 <li>• AI Accountability partner.</li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Testimonial */}
+            <section className="py-24 bg-zinc-900/30 border-y border-zinc-800/50">
+                <div className="max-w-4xl mx-auto px-4 text-center">
+                    <div className="flex justify-center mb-6">
+                        <div className="flex gap-1 text-amber-500">
+                            {[1, 2, 3, 4, 5].map((i) => (
+                                <Star key={i} className="w-6 h-6 fill-current" />
+                            ))}
+                        </div>
+                    </div>
+                    <blockquote className="text-2xl md:text-3xl font-medium text-white mb-8 leading-relaxed">
+                        "I used to study 10 hours but had no idea if I was covering the syllabus. Now, my Sunday Report tells me exactly what to fix for next week. It's like having a mentor in my pocket."
+                    </blockquote>
+                    <div className="flex items-center justify-center gap-4">
+                        <div className="w-12 h-12 rounded-full bg-zinc-700 flex items-center justify-center text-zinc-300 font-bold">
+                            AS
+                        </div>
+                        <div className="text-left">
+                            <div className="text-white font-bold">Ankit Sharma</div>
+                            <div className="text-zinc-500 text-sm">UPSC Aspirant (Delhi)</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Pricing Section */}
+            <section className="py-24 bg-black">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-bold text-white mb-4">Flexible Plans</h2>
+                        <p className="text-zinc-400">Invest in your selection.</p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        {/* Standard Plan */}
+                        <div className="p-8 rounded-3xl bg-zinc-900/50 border border-zinc-800 flex flex-col">
+                            <div className="mb-8">
+                                <h3 className="text-xl font-bold text-white mb-2">Standard Plan</h3>
+                                <div className="flex items-baseline gap-1">
+                                    <span className="text-3xl font-bold text-white">₹229</span>
+                                    <span className="text-zinc-500">/mo</span>
+                                </div>
+                                <p className="text-zinc-400 mt-4 text-sm">Tracks your effort accurately.</p>
+                            </div>
+                            <ul className="space-y-4 mb-8 flex-1">
+                                <li className="flex items-center text-zinc-300 text-sm"><Check className="w-4 h-4 mr-3 text-green-500 shrink-0" /> Smart Logging (Unlimited)</li>
+                                <li className="flex items-center text-zinc-300 text-sm"><Check className="w-4 h-4 mr-3 text-green-500 shrink-0" /> Daily Scorecard (Basic)</li>
+                                <li className="flex items-center text-zinc-300 text-sm"><Check className="w-4 h-4 mr-3 text-green-500 shrink-0" /> Weekly Report (Text Summary)</li>
+                                <li className="flex items-center text-zinc-300 text-sm"><Check className="w-4 h-4 mr-3 text-green-500 shrink-0" /> Syllabus Tracker (Basic)</li>
+                                <li className="flex items-center text-zinc-500 text-sm"><Check className="w-4 h-4 mr-3 text-zinc-700 shrink-0" /> No AI Strategy Coach</li>
+                                <li className="flex items-center text-zinc-500 text-sm"><Check className="w-4 h-4 mr-3 text-zinc-700 shrink-0" /> No Intelligent Nudges</li>
+                            </ul>
+                            <Link
+                                href={siteConfig.links.whatsapp}
+                                className="block w-full py-4 text-center rounded-xl border border-zinc-700 text-white font-bold hover:bg-zinc-800 transition-all"
+                            >
+                                Get Standard
+                            </Link>
+                        </div>
+
+                        {/* Premium Plan */}
+                        <div className="p-8 rounded-3xl bg-zinc-900 border border-amber-500/30 flex flex-col relative overflow-hidden">
+                            <div className="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-xl">RECOMMENDED</div>
+                            <div className="mb-8">
+                                <h3 className="text-xl font-bold text-white mb-2">Premium Plan</h3>
+                                <div className="flex items-baseline gap-1">
+                                    <span className="text-3xl font-bold text-white">₹499</span>
+                                    <span className="text-zinc-500">/mo</span>
+                                </div>
+                                <p className="text-amber-500 mt-4 text-sm font-medium">Optimizes your strategy.</p>
+                            </div>
+                            <ul className="space-y-4 mb-8 flex-1">
+                                <li className="flex items-center text-white text-sm"><Check className="w-4 h-4 mr-3 text-amber-500 shrink-0" /> Smart Logging (Unlimited)</li>
+                                <li className="flex items-center text-white text-sm"><Check className="w-4 h-4 mr-3 text-amber-500 shrink-0" /> Daily Scorecard (AI Personalized)</li>
+                                <li className="flex items-center text-white text-sm"><Check className="w-4 h-4 mr-3 text-amber-500 shrink-0" /> Weekly Report (Detailed PDF)</li>
+                                <li className="flex items-center text-white text-sm"><Check className="w-4 h-4 mr-3 text-amber-500 shrink-0" /> Syllabus Tracker (Heatmap)</li>
+                                <li className="flex items-center text-white text-sm"><Check className="w-4 h-4 mr-3 text-amber-500 shrink-0" /> ✅ AI Strategy Coach</li>
+                                <li className="flex items-center text-white text-sm"><Check className="w-4 h-4 mr-3 text-amber-500 shrink-0" /> ✅ Intelligent Nudges (Proactive)</li>
+                            </ul>
+                            <Link
+                                href={siteConfig.links.whatsapp}
+                                className="block w-full py-4 text-center rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 text-black font-bold hover:opacity-90 transition-all shadow-lg shadow-amber-500/20"
+                            >
+                                Get Premium
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Why Premium? */}
+                    <div className="mt-16 max-w-3xl mx-auto text-center bg-zinc-900/30 rounded-2xl p-8 border border-zinc-800">
+                        <h3 className="text-xl font-bold text-white mb-3">🎯 Why Premium?</h3>
+                        <p className="text-zinc-400 italic">
+                            "The Standard plan tracks your effort. The Premium plan <span className="text-amber-500 font-medium">optimizes your strategy</span>. For the price of a coffee, get an AI Coach that ensures your hard work actually translates to marks."
+                        </p>
                     </div>
                 </div>
             </section>
