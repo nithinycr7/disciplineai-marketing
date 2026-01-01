@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Check, BookOpen, Brain, Target, TrendingUp, Trophy } from "lucide-react";
+import { ArrowRight, Check, BookOpen, Brain, Target, TrendingUp, Trophy, CheckCircle, Bell, Calendar, Award } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { WhatsAppMock } from "@/components/WhatsAppMock";
 import { WeeklyReportCard } from "@/components/WeeklyReportCard";
@@ -104,7 +104,97 @@ export default function UPSCPage() {
                 </div>
             </section>
 
-            {/* Comparison */}
+            {/* Tailored for UPSC Section */}
+            <section className="py-24 bg-zinc-900/50 border-y border-zinc-800/50">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-bold text-white mb-4">Tailored for UPSC</h2>
+                        <p className="text-zinc-400 max-w-2xl mx-auto">
+                            We understand the marathon. Discipline.AI is built specifically to handle the vastness and complexity of the UPSC syllabus.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {/* Prelims & Mains Focus */}
+                        <div className="flex gap-4 items-start">
+                            <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0">
+                                <Target className="w-6 h-6 text-blue-500" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-white mb-2">Prelims & Mains Integrated</h3>
+                                <p className="text-zinc-400 text-sm leading-relaxed">
+                                    Track GS, CSAT, Optional, and Essay separately. We know the weightage differs, and so does our tracking logic.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Full Syllabus Coverage */}
+                        <div className="flex gap-4 items-start">
+                            <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center shrink-0">
+                                <BookOpen className="w-6 h-6 text-purple-500" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-white mb-2">Comprehensive Syllabus</h3>
+                                <p className="text-zinc-400 text-sm leading-relaxed">
+                                    From Art & Culture to International Relations. Our AI recognizes every micro-topic in the UPSC syllabus.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Reminders & Motivation */}
+                        <div className="flex gap-4 items-start">
+                            <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0">
+                                <Bell className="w-6 h-6 text-amber-500" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-white mb-2">Reminders & Motivation</h3>
+                                <p className="text-zinc-400 text-sm leading-relaxed">
+                                    Missed a slot? We nudge you. Feeling low? We send stoic quotes and reminders of your 'Why'.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Monthly Progress Card */}
+                        <div className="flex gap-4 items-start">
+                            <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center shrink-0">
+                                <Calendar className="w-6 h-6 text-green-500" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-white mb-2">Monthly Progress Card</h3>
+                                <p className="text-zinc-400 text-sm leading-relaxed">
+                                    A zoomed-out view of your month. See your consistency streak and total hours clocked versus your competitors.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Weekly Drivers */}
+                        <div className="flex gap-4 items-start">
+                            <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center shrink-0">
+                                <TrendingUp className="w-6 h-6 text-cyan-500" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-white mb-2">Weekly Drivers</h3>
+                                <p className="text-zinc-400 text-sm leading-relaxed">
+                                    Get analysis on your "Driver Subjects" — the ones pushing your score up, and "Anchor Subjects" holding you down.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Answer Writing */}
+                        <div className="flex gap-4 items-start">
+                            <div className="w-12 h-12 rounded-xl bg-rose-500/10 flex items-center justify-center shrink-0">
+                                <Award className="w-6 h-6 text-rose-500" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-white mb-2">Answer Writing Tracker</h3>
+                                <p className="text-zinc-400 text-sm leading-relaxed">
+                                    Log daily answer counts. We track not just study hours, but output-based metrics crucial for Mains.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section className="py-24 bg-black">
                 <div className="max-w-4xl mx-auto px-4">
                     <h2 className="text-3xl font-bold text-white text-center mb-12">Why Discipline.AI?</h2>

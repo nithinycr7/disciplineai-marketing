@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, Check, Zap, BarChart, MessageSquare, BrainCircuit, LineChart, Bot } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Check, Zap, BarChart, MessageSquare, BrainCircuit, LineChart, Bot, PieChart, Sparkles, Layout } from "lucide-react";
 import { WhatsAppMock } from "@/components/WhatsAppMock";
 import { Stats } from "@/components/Stats";
 import { siteConfig, VERTICALS } from "@/config/site";
@@ -8,13 +9,13 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-32 overflow-hidden">
+      <section className="relative pt-0 pb-24 overflow-hidden">
         {/* Background Gradients */}
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-[600px] h-[600px] bg-secondary/20 rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start pt-20">
             <div>
               <div className="inline-flex items-center rounded-full border border-zinc-800 bg-zinc-900/50 px-3 py-1 text-sm text-zinc-400 mb-6 backdrop-blur-xl">
                 <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
@@ -57,8 +58,15 @@ export default function Home() {
             </div>
 
             <div className="relative flex justify-center lg:justify-end">
-              <div className="transform scale-90 md:scale-100">
-                <WhatsAppMock />
+              <div className="relative w-full max-w-[400px] aspect-[9/19] transform hover:scale-105 transition-transform duration-700">
+                <div className="absolute inset-0 bg-primary/20 blur-3xl -z-10 rounded-full opacity-50 animate-pulse"></div>
+                <Image
+                  src="/hero_phone_final.png"
+                  alt="Discipline.AI App Interface"
+                  fill
+                  className="object-contain object-center drop-shadow-2xl z-10"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -159,13 +167,71 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section >
+      </section>
+
+      {/* Product Highlights Section */}
+      <section className="py-24 bg-black border-y border-zinc-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-4">Everything You Need to Win</h2>
+            <p className="text-zinc-500 max-w-2xl mx-auto">
+              We've engineered every pixel to keep you focused, disciplined, and moving forward.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Quantified Discipline */}
+            <div className="p-6 rounded-3xl bg-zinc-900/20 border border-zinc-800 hover:border-zinc-700 transition-all">
+              <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4 text-blue-500">
+                <BarChart className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">Quantified Discipline</h3>
+              <p className="text-sm text-zinc-400">
+                Exact hours and percentages. Users love stats because numbers don't lie.
+              </p>
+            </div>
+
+            {/* Subject Balance */}
+            <div className="p-6 rounded-3xl bg-zinc-900/20 border border-zinc-800 hover:border-zinc-700 transition-all">
+              <div className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center mb-4 text-purple-500">
+                <PieChart className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">Subject Balance</h3>
+              <p className="text-sm text-zinc-400">
+                Visual breakdowns help you balance your syllabus and avoid neglecting subjects.
+              </p>
+            </div>
+
+            {/* AI Motivation */}
+            <div className="p-6 rounded-3xl bg-zinc-900/20 border border-zinc-800 hover:border-zinc-700 transition-all">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4 text-amber-500">
+                <Sparkles className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">AI Motivation</h3>
+              <p className="text-sm text-zinc-400">
+                Personalized, encouraging text. It's not just a tracker; it's a mentor.
+              </p>
+            </div>
+
+            {/* Clean UI */}
+            <div className="p-6 rounded-3xl bg-zinc-900/20 border border-zinc-800 hover:border-zinc-700 transition-all">
+              <div className="w-10 h-10 rounded-xl bg-green-500/10 flex items-center justify-center mb-4 text-green-500">
+                <Layout className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">Clean UI</h3>
+              <p className="text-sm text-zinc-400">
+                Premium aesthetics with clean spacing and emojis. Easy to read, joyful to use.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Stats */}
-      < Stats />
+      <Stats />
 
       {/* How it Works */}
-      < section id="how-it-works" className="py-24 bg-zinc-950 relative" >
+      <section id="how-it-works" className="py-24 bg-zinc-950 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">No App to Install. Just WhatsApp.</h2>
