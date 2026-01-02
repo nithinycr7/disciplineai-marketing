@@ -9,7 +9,7 @@ import { WhatsAppMock } from "@/components/WhatsAppMock";
 import { WeeklyReportCard } from "@/components/WeeklyReportCard";
 import { MorningSurprise } from "@/components/MorningSurprise";
 import { NEETDashboardPreview } from "@/components/NEETDashboardPreview";
-import { LiveSessionHero } from "@/components/LiveSessionHero";
+import { ProductMockupHero } from "@/components/LiveSessionHero";
 
 export default function NEETPage() {
     return (
@@ -85,7 +85,7 @@ export default function NEETPage() {
                             </div>
                         </div>
                         <div className="flex-1 flex justify-center lg:justify-end">
-                            <LiveSessionHero variant="NEET" />
+                            <ProductMockupHero variant="NEET" />
                         </div>
                     </div>
                 </div>

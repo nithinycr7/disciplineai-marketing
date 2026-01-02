@@ -10,7 +10,7 @@ import { Stats } from "@/components/Stats";
 import { ElitePreview } from "@/components/ElitePreview";
 import { MorningSurprise } from "@/components/MorningSurprise";
 import { siteConfig, VERTICALS } from "@/config/site";
-import { LiveSessionHero } from "@/components/LiveSessionHero";
+import { ProductMockupHero } from "@/components/LiveSessionHero";
 
 export default function Home() {
   return (
@@ -74,7 +74,7 @@ export default function Home() {
             </div>
 
             <div className="relative flex justify-center lg:justify-end animate-float">
-              <LiveSessionHero />
+              <ProductMockupHero />
             </div>
           </div>
         </div>

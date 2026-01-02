@@ -9,7 +9,7 @@ import { siteConfig } from "@/config/site";
 import { WhatsAppMock } from "@/components/WhatsAppMock";
 import { WeeklyReportCard } from "@/components/WeeklyReportCard";
 import { MorningSurprise } from "@/components/MorningSurprise";
-import { LiveSessionHero } from "@/components/LiveSessionHero";
+import { ProductMockupHero } from "@/components/LiveSessionHero";
 
 export default function UPSCPage() {
     return (
@@ -51,7 +51,7 @@ export default function UPSCPage() {
                     </div>
 
                     <div className="flex-1 flex justify-center lg:justify-end">
-                        <LiveSessionHero variant="UPSC" />
+                        <ProductMockupHero variant="UPSC" />
                     </div>
                 </div>
             </section>

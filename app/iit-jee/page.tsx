@@ -9,7 +9,7 @@ import { WhatsAppMock } from "@/components/WhatsAppMock";
 import { WeeklyReportCard } from "@/components/WeeklyReportCard";
 import { MorningSurprise } from "@/components/MorningSurprise";
 import { JEEDashboardPreview } from "@/components/JEEDashboardPreview";
-import { LiveSessionHero } from "@/components/LiveSessionHero";
+import { ProductMockupHero } from "@/components/LiveSessionHero";
 
 export default function IITJEEPage() {
     return (
@@ -72,7 +72,7 @@ export default function IITJEEPage() {
                             </div>
                         </div>
                         <div className="flex-1 flex justify-center lg:justify-end">
-                            <LiveSessionHero variant="IITJEE" />
+                            <ProductMockupHero variant="IITJEE" />
                         </div>
                     </div>
                 </div>
