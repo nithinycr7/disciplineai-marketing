@@ -3,13 +3,48 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-import { BookOpen, TrendingUp, Trophy, Zap, Clock, Target } from "lucide-react";
+import { BookOpen, TrendingUp, Trophy, Zap, Clock, Target, Beaker, Atom, FunctionSquare } from "lucide-react";
 
-export function WhatsAppMock() {
+interface WhatsAppMockProps {
+    variant?: "UPSC" | "NEET" | "IITJEE";
+}
+
+export function WhatsAppMock({ variant = "UPSC" }: WhatsAppMockProps) {
     const [visibleMessages, setVisibleMessages] = useState<number>(0);
 
+    const getVariantData = () => {
+        switch (variant) {
+            case "NEET":
+                return {
+                    firstMsg: "Logged: 3h Biology (NCERT), 1h Chemistry MCQ practice",
+                    subjects: [
+                        { name: "Biology", icon: Beaker, color: "text-emerald-500", barColor: "bg-emerald-500", hours: "24.5h", percentage: 85 },
+                        { name: "Chemistry", icon: Atom, color: "text-blue-500", barColor: "bg-blue-500", hours: "18.0h", percentage: 65 },
+                    ]
+                };
+            case "IITJEE":
+                return {
+                    firstMsg: "Logged: 4h Calculus, 2h Physics (Mechanics)",
+                    subjects: [
+                        { name: "Maths", icon: FunctionSquare, color: "text-purple-500", barColor: "bg-purple-500", hours: "28.0h", percentage: 90 },
+                        { name: "Physics", icon: Atom, color: "text-blue-500", barColor: "bg-blue-500", hours: "22.5h", percentage: 75 },
+                    ]
+                };
+            default:
+                return {
+                    firstMsg: "Logged: 2h Polity reading, 30 mins Answer writing",
+                    subjects: [
+                        { name: "History", icon: BookOpen, color: "text-amber-500", barColor: "bg-amber-500", hours: "12.0h", percentage: 85 },
+                        { name: "Polity", icon: Trophy, color: "text-cyan-500", barColor: "bg-cyan-500", hours: "10.5h", percentage: 70 },
+                    ]
+                };
+        }
+    };
+
+    const variantData = getVariantData();
+
     const MESSAGES = [
-        { type: "out", text: "Logged: 2h Polity reading, 30 mins Answer writing" },
+        { type: "out", text: variantData.firstMsg },
         { type: "in", text: "Got it. Total study today: 2.5h. Good start. 🎯\n\nYou are trailing your weekly target. 30 more mins?" },
         {
             type: "in",
@@ -57,38 +92,25 @@ export function WhatsAppMock() {
                         </div>
 
                         <div className="space-y-2">
-                            {/* History */}
-                            <div className="group">
-                                <div className="flex justify-between text-xs mb-1">
-                                    <span className="text-white flex items-center gap-1.5">
-                                        <BookOpen size={10} className="text-amber-500" />
-                                        History
-                                    </span>
-                                    <span className="font-mono text-zinc-300">12.0h</span>
+                            {variantData.subjects.map((subj, idx) => (
+                                <div key={idx} className="group">
+                                    <div className="flex justify-between text-xs mb-1">
+                                        <span className="text-white flex items-center gap-1.5">
+                                            <subj.icon size={10} className={subj.color} />
+                                            {subj.name}
+                                        </span>
+                                        <span className="font-mono text-zinc-300">{subj.hours}</span>
+                                    </div>
+                                    <div className="h-1.5 w-full bg-zinc-800 rounded-full overflow-hidden">
+                                        <div className={`h-full ${subj.barColor} w-[${subj.percentage}%] rounded-full`} style={{ width: `${subj.percentage}%` }} />
+                                    </div>
                                 </div>
-                                <div className="h-1.5 w-full bg-zinc-800 rounded-full overflow-hidden">
-                                    <div className="h-full bg-gradient-to-r from-amber-500 to-orange-500 w-[85%] rounded-full" />
-                                </div>
-                            </div>
-
-                            {/* Polity */}
-                            <div className="group">
-                                <div className="flex justify-between text-xs mb-1">
-                                    <span className="text-white flex items-center gap-1.5">
-                                        <Trophy size={10} className="text-cyan-500" />
-                                        Polity
-                                    </span>
-                                    <span className="font-mono text-zinc-300">10.5h</span>
-                                </div>
-                                <div className="h-1.5 w-full bg-zinc-800 rounded-full overflow-hidden">
-                                    <div className="h-full bg-cyan-500 w-[70%] rounded-full" />
-                                </div>
-                            </div>
+                            ))}
 
                             {/* Others */}
                             <div className="flex items-center gap-2 pt-1">
                                 <div className="h-0.5 flex-1 bg-zinc-800" />
-                                <span className="text-[10px] text-zinc-500">+5 others</span>
+                                <span className="text-[10px] text-zinc-500">+2 others</span>
                                 <div className="h-0.5 flex-1 bg-zinc-800" />
                             </div>
                         </div>
@@ -113,7 +135,7 @@ export function WhatsAppMock() {
     }, []);
 
     return (
-        <div className="relative mx-auto w-full max-w-[320px] rounded-[2.5rem] border-[8px] border-zinc-800 bg-zinc-900 shadow-2xl overflow-hidden h-[600px] flex flex-col">
+        <div className="relative mx-auto w-full max-w-[320px] rounded-[2.5rem] border-[8px] border-zinc-800 bg-zinc-900 shadow-2xl overflow-hidden h-full flex flex-col">
             {/* Dynamic Island / Notch */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-zinc-800 rounded-b-2xl z-20"></div>
 
@@ -176,3 +198,4 @@ export function WhatsAppMock() {
         </div>
     );
 }
+

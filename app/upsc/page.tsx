@@ -1,376 +1,244 @@
 import Link from "next/link";
-import { ArrowRight, Check, BookOpen, Brain, Target, TrendingUp, Trophy, CheckCircle, Bell, Calendar, Award, MessageSquare, Sun, AlertTriangle, Zap, Star } from "lucide-react";
+import {
+    ArrowRight, Check, BookOpen, Brain, Target,
+    TrendingUp, Trophy, CheckCircle, Bell, Calendar,
+    Award, MessageSquare, Sun, AlertTriangle, Zap,
+    Star, Sparkles, Shield, Compass, Scale, History
+} from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { WhatsAppMock } from "@/components/WhatsAppMock";
 import { WeeklyReportCard } from "@/components/WeeklyReportCard";
+import { MorningSurprise } from "@/components/MorningSurprise";
 
 export default function UPSCPage() {
     return (
-        <div className="flex flex-col min-h-screen bg-black">
-            {/* Hero */}
-            <section className="relative pt-32 pb-24 px-4 overflow-hidden">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div className="flex flex-col min-h-screen bg-black selection:bg-amber-500 selection:text-black">
+            {/* Hero Section - High Status */}
+            <section className="relative pt-32 pb-24 px-4 overflow-hidden bg-grid-white">
+                <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[120px] opacity-20 pointer-events-none"></div>
+
+                <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10">
                     <div className="flex-1">
-                        <div className="inline-block px-3 py-1 mb-6 text-sm font-medium text-amber-500 bg-amber-500/10 rounded-full">
-                            For Serious Aspirants
+                        <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-[10px] font-black uppercase tracking-[0.3em] text-amber-500 bg-amber-500/10 border border-amber-500/20 rounded-full">
+                            FOR SERIOUS TOPPERS ONLY
                         </div>
-                        <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                            Stop Just "Studying". <br />
-                            <span className="text-primary">Start Training to Win.</span>
+                        <h1 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-[0.9]">
+                            BUILD YOUR <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-yellow-600 italic">
+                                TOPPER LEGACY.
+                            </span>
                         </h1>
-                        <p className="text-xl text-zinc-400 mb-8 leading-relaxed">
-                            The first WhatsApp-native AI tracker that turns your raw study logs into powerful insights, discipline, and strategy.
-                            <br /><br />
-                            <span className="text-zinc-500 text-lg">"Cracking UPSC isn't about hours. It's about consistency and strategy. DISCIPLINE.AI automates both directly on WhatsApp."</span>
+                        <p className="text-xl text-zinc-400 mb-10 leading-relaxed font-medium max-w-xl">
+                            UPSC isn't just an exam; it's a war of attrition. Step into the Top 1% with the <b>Discipline Elite Portfolio</b>—the only system that proves your grit to the world.
                         </p>
-                        <Link
-                            href={siteConfig.links.whatsapp}
-                            className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-black bg-white rounded-full hover:bg-zinc-200 transition-all"
-                        >
-                            Start UPSC Tracking <ArrowRight className="ml-2 h-5 w-5" />
-                        </Link>
-                    </div>
-                    <div className="flex-1 flex justify-center">
-                        <div className="relative">
-                            <div className="absolute inset-0 bg-primary/20 blur-3xl -z-10 rounded-full opacity-50"></div>
-                            <WhatsAppMock />
+
+                        <div className="flex flex-col sm:flex-row gap-5">
+                            <Link
+                                href={siteConfig.links.whatsapp}
+                                className="inline-flex items-center justify-center px-10 py-5 text-lg font-black text-black bg-amber-500 rounded-2xl hover:bg-amber-400 transition-all shadow-[0_0_40px_-10px_rgba(245,158,11,0.5)] transform hover:scale-105 active:scale-95"
+                            >
+                                SECURE YOUR POSITION <ArrowRight className="ml-3 h-6 w-6" />
+                            </Link>
+                        </div>
+
+                        <div className="mt-12 flex items-center gap-4">
+                            <div className="flex -space-x-2">
+                                {[1, 2, 3].map(i => <div key={i} className="w-8 h-8 rounded-full bg-zinc-800 border-2 border-black flex items-center justify-center text-[8px] font-bold">U{i}</div>)}
+                            </div>
+                            <p className="text-xs text-zinc-500 font-bold uppercase tracking-widest">Trusted by serious aspirants</p>
                         </div>
                     </div>
+
+                    <div className="flex-1 flex justify-center lg:justify-end">
+                        <div className="relative h-[600px] w-full max-w-[340px] overflow-hidden rounded-t-[3rem] border-x border-t border-white/10 glass-card">
+                            <div className="absolute inset-0 bg-amber-500/10 blur-[80px] -z-10 rounded-full opacity-30"></div>
+                            <WhatsAppMock variant="UPSC" />
+                            <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black via-black/80 to-transparent z-20"></div>
+
+                            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 w-full px-6">
+                                <div className="bg-amber-500/10 backdrop-blur-xl border border-amber-500/20 p-4 rounded-2xl shadow-2xl">
+                                    <div className="flex items-center justify-between mb-1">
+                                        <span className="text-[9px] text-amber-500 font-black uppercase tracking-widest">Syllabus Mastered</span>
+                                        <span className="text-[9px] text-zinc-400 font-bold">Week 12</span>
+                                    </div>
+                                    <div className="text-xl font-black text-white">72% Polity</div>
+                                    <div className="mt-2 h-1 w-full bg-zinc-800 rounded-full overflow-hidden">
+                                        <div className="h-full bg-amber-500 w-[72%]" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* AI Auditor Section */}
+            <section className="py-32 bg-black relative">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="text-center mb-16">
+                        <h3 className="text-3xl font-black text-white mb-4 tracking-tighter uppercase italic">WAKE UP TO CLARITY</h3>
+                        <p className="text-zinc-500 font-bold uppercase tracking-widest text-[10px]">Your UPSC strategist audits your daily focus while you sleep.</p>
+                    </div>
+                    <MorningSurprise />
                 </div>
             </section>
 
             {/* Weekly Report Showcase */}
-            <section className="py-24 bg-zinc-950 border-y border-zinc-900">
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className="flex flex-col md:flex-row items-center gap-16">
-                        <div className="flex-1 order-2 md:order-1 flex justify-center">
-                            <div className="transform rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
+            <section className="py-24 bg-zinc-950 border-y border-white/5 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-full bg-grid-white opacity-10 pointer-events-none"></div>
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-24">
+                        <div className="flex-1 order-2 lg:order-1">
+                            <div className="relative group">
+                                <div className="absolute -inset-10 bg-amber-500/20 blur-[100px] opacity-10 group-hover:opacity-20 transition-opacity"></div>
                                 <WeeklyReportCard />
                             </div>
                         </div>
-                        <div className="flex-1 order-1 md:order-2">
-                            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-sm font-medium text-cyan-400 bg-cyan-400/10 rounded-full">
-                                <TrendingUp className="w-4 h-4" /> Weekly Reality Check
-                            </div>
-                            <h2 className="text-4xl font-bold text-white mb-6">
-                                The Report Card <br />
-                                <span className="text-zinc-500">You Can't Ignore.</span>
+                        <div className="flex-1 order-1 lg:order-2">
+                            <div className="inline-block px-3 py-1 mb-6 text-[10px] font-black uppercase tracking-widest text-amber-500 bg-amber-500/10 border border-amber-500/20 rounded-full">QUANTIFIED GRIT</div>
+                            <h2 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-none">
+                                DATA AS <br /><span className="italic text-zinc-500 underline decoration-amber-500/50 underline-offset-8">UNBREAKABLE</span> <br />AS YOUR WILL.
                             </h2>
-                            <p className="text-lg text-zinc-400 mb-8 leading-relaxed">
-                                Every Sunday, you get a detailed breakdown of your week.
-                                We visualize your effort across subjects so you can spot gaps immediately.
-                                <br /><br />
-                                <span className="text-white font-medium">History is strong, but what about Ethics?</span>
-                                <br />
-                                Our report reflects the mirror you need to see.
+                            <p className="text-xl text-zinc-400 mb-10 font-medium leading-relaxed">
+                                Don't rely on gut feelings. Our AI Audit transforms your daily chaos into a clear roadmap of Subject Mastery, Clock Consistency, and Prep Velocity.
                             </p>
-                            <div className="grid grid-cols-2 gap-4">
-                                <div className="flex items-center gap-3 text-zinc-300">
-                                    <div className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center">
-                                        <Trophy className="w-4 h-4 text-amber-500" />
-                                    </div>
-                                    <span className="text-sm">Subject-wise Breakdown</span>
-                                </div>
-                                <div className="flex items-center gap-3 text-zinc-300">
-                                    <div className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center">
-                                        <Target className="w-4 h-4 text-cyan-500" />
-                                    </div>
-                                    <span className="text-sm">Target vs Achieved</span>
-                                </div>
+                            <div className="space-y-6">
+                                <UPSCPoint icon={Compass} title="Micro-Syllabus Tracking" desc="We break down the vast UPSC syllabus into manageable 1-hour sessions." />
+                                <UPSCPoint icon={Scale} title="Answer Writing Momentum" desc="Track your daily answer writing count and time-per-question metrics." />
+                                <UPSCPoint icon={History} title="GS vs Optional Balance" desc="Real-time audits to ensure you aren't ignoring your Optional subjects." />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Key Features (The "Why") */}
-            <section className="py-24 bg-zinc-950">
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-white mb-4">The System that Wins</h2>
-                        <p className="text-zinc-400">Built to solve the specific behavioral problems of UPSC aspirants.</p>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {/* 1. Smart Logging */}
-                        <div className="p-8 rounded-3xl bg-zinc-900 border border-zinc-800 hover:border-primary/30 transition-all">
-                            <MessageSquare className="w-10 h-10 text-primary mb-6" />
-                            <h3 className="text-2xl font-bold text-white mb-3">1. Smart Logging (No Data Entry)</h3>
-                            <p className="text-zinc-400 leading-relaxed mb-4">
-                                Forget complex apps. Just text us like a friend. "Studied Polity for 2 hours, covered Directive Principles."
-                                <br /><br />
-                                We handle the rest: Our AI instantly categorizes it, maps it to the UPSC syllabus, and updates your stats. Frictionless.
-                            </p>
-                        </div>
-
-                        {/* 2. Morning Scorecard */}
-                        <div className="p-8 rounded-3xl bg-zinc-900 border border-zinc-800 hover:border-amber-500/30 transition-all">
-                            <Sun className="w-10 h-10 text-amber-500 mb-6" />
-                            <h3 className="text-2xl font-bold text-white mb-3">2. The "Morning Scorecard"</h3>
-                            <p className="text-zinc-400 leading-relaxed mb-4">
-                                Start every day with momentum. Wake up to a personalized report:
-                            </p>
-                            <ul className="space-y-2 text-zinc-500 text-sm bg-black/30 p-4 rounded-xl">
-                                <li className="flex gap-2"><span>📊</span> Yesterday's Reality: "You studied 7.5h (Goal: 8h)."</li>
-                                <li className="flex gap-2"><span>📈</span> Syllabus Tracking: "Great progress on Environment!"</li>
-                                <li className="flex gap-2"><span>🤖</span> AI Nuance: "You've ignored History for 3 days. Let's fix that today."</li>
-                            </ul>
-                        </div>
-
-                        {/* 3. Strategic Review */}
-                        <div className="p-8 rounded-3xl bg-zinc-900 border border-zinc-800 hover:border-cyan-500/30 transition-all">
-                            <Zap className="w-10 h-10 text-cyan-500 mb-6" />
-                            <h3 className="text-2xl font-bold text-white mb-3">3. Weekly "Strategic Review"</h3>
-                            <p className="text-zinc-400 leading-relaxed mb-4">
-                                Don't just work hard. Work smart. Every Sunday, receive a comprehensive performance review:
-                            </p>
-                            <ul className="space-y-2 text-zinc-500 text-sm bg-black/30 p-4 rounded-xl">
-                                <li className="flex gap-2"><span>🗺️</span> Subject Mastery Heatmap: See exactly where you are strong (Polity) and weak (Economics).</li>
-                                <li className="flex gap-2"><span>🔥</span> Consistency Score: Valid streak tracking.</li>
-                                <li className="flex gap-2"><span>🧠</span> AI Coach Feedback: "Strategy for next week: 2 hours of revision every morning."</li>
-                            </ul>
-                        </div>
-
-                        {/* 4. Intelligent Nudges */}
-                        <div className="p-8 rounded-3xl bg-zinc-900 border border-zinc-800 hover:border-rose-500/30 transition-all">
-                            <AlertTriangle className="w-10 h-10 text-rose-500 mb-6" />
-                            <h3 className="text-2xl font-bold text-white mb-3">4. Intelligent Nudges</h3>
-                            <p className="text-zinc-400 leading-relaxed mb-4">
-                                We know when you're slacking before you do.
-                            </p>
-                            <ul className="space-y-2 text-zinc-500 text-sm bg-black/30 p-4 rounded-xl">
-                                <li className="flex gap-2"><span>🌙</span> <b>The "Evening Check-in":</b> Haven't logged by 9 PM? We gently nudge you to ensure a non-zero day.</li>
-                                <li className="flex gap-2"><span>⚠️</span> <b>The "Binge Alert":</b> "Warning: You're over-investing in Geography. Switch to CSAT to balance your risk."</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Tailored for UPSC Section */}
-            <section className="py-24 bg-zinc-900/50 border-y border-zinc-800/50">
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-white mb-4">Tailored for UPSC</h2>
-                        <p className="text-zinc-400 max-w-2xl mx-auto">
-                            We understand the marathon. Discipline.AI is built specifically to handle the vastness and complexity of the UPSC syllabus.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {/* Prelims & Mains Focus */}
-                        <div className="flex gap-4 items-start">
-                            <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0">
-                                <Target className="w-6 h-6 text-blue-500" />
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-bold text-white mb-2">Prelims & Mains Integrated</h3>
-                                <p className="text-zinc-400 text-sm leading-relaxed">
-                                    Track GS, CSAT, Optional, and Essay separately. We know the weightage differs, and so does our tracking logic.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Full Syllabus Coverage */}
-                        <div className="flex gap-4 items-start">
-                            <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center shrink-0">
-                                <BookOpen className="w-6 h-6 text-purple-500" />
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-bold text-white mb-2">Comprehensive Syllabus</h3>
-                                <p className="text-zinc-400 text-sm leading-relaxed">
-                                    From Art & Culture to International Relations. Our AI recognizes every micro-topic in the UPSC syllabus.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Reminders & Motivation */}
-                        <div className="flex gap-4 items-start">
-                            <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0">
-                                <Bell className="w-6 h-6 text-amber-500" />
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-bold text-white mb-2">Reminders & Motivation</h3>
-                                <p className="text-zinc-400 text-sm leading-relaxed">
-                                    Missed a slot? We nudge you. Feeling low? We send stoic quotes and reminders of your 'Why'.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Monthly Progress Card */}
-                        <div className="flex gap-4 items-start">
-                            <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center shrink-0">
-                                <Calendar className="w-6 h-6 text-green-500" />
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-bold text-white mb-2">Monthly Progress Card</h3>
-                                <p className="text-zinc-400 text-sm leading-relaxed">
-                                    A zoomed-out view of your month. See your consistency streak and total hours clocked versus your competitors.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Weekly Drivers */}
-                        <div className="flex gap-4 items-start">
-                            <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center shrink-0">
-                                <TrendingUp className="w-6 h-6 text-cyan-500" />
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-bold text-white mb-2">Weekly Drivers</h3>
-                                <p className="text-zinc-400 text-sm leading-relaxed">
-                                    Get analysis on your "Driver Subjects" — the ones pushing your score up, and "Anchor Subjects" holding you down.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Answer Writing */}
-                        <div className="flex gap-4 items-start">
-                            <div className="w-12 h-12 rounded-xl bg-rose-500/10 flex items-center justify-center shrink-0">
-                                <Award className="w-6 h-6 text-rose-500" />
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-bold text-white mb-2">Answer Writing Tracker</h3>
-                                <p className="text-zinc-400 text-sm leading-relaxed">
-                                    Log daily answer counts. We track not just study hours, but output-based metrics crucial for Mains.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section className="py-24 bg-black">
-                <div className="max-w-4xl mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-white text-center mb-12">Why Discipline.AI?</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="p-8 bg-red-950/20 border border-red-900/50 rounded-2xl">
-                            <h3 className="text-red-500 font-bold mb-4 flex items-center">🚫 The Old Way</h3>
-                            <ul className="space-y-3 text-zinc-400">
-                                <li>• Manual Excel sheets you forget to update.</li>
-                                <li>• Distracting apps with Reels/Shorts.</li>
-                                <li>• Overwhelmed by "Content" overload.</li>
-                                <li>• Lonely preparation journey.</li>
-                            </ul>
-                        </div>
-                        <div className="p-8 bg-green-950/20 border border-green-900/50 rounded-2xl">
-                            <h3 className="text-green-500 font-bold mb-4 flex items-center">✅ The Discipline Way</h3>
-                            <ul className="space-y-3 text-zinc-300">
-                                <li>• Log via chat in 5 seconds.</li>
-                                <li>• Zero new content. Zero distractions.</li>
-                                <li>• Pure data visibility on your effort.</li>
-                                <li>• AI Accountability partner.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Testimonial */}
-            <section className="py-24 bg-zinc-900/30 border-y border-zinc-800/50">
-                <div className="max-w-4xl mx-auto px-4 text-center">
-                    <div className="flex justify-center mb-6">
-                        <div className="flex gap-1 text-amber-500">
-                            {[1, 2, 3, 4, 5].map((i) => (
-                                <Star key={i} className="w-6 h-6 fill-current" />
-                            ))}
-                        </div>
-                    </div>
-                    <blockquote className="text-2xl md:text-3xl font-medium text-white mb-8 leading-relaxed">
-                        "I used to study 10 hours but had no idea if I was covering the syllabus. Now, my Sunday Report tells me exactly what to fix for next week. It's like having a mentor in my pocket."
-                    </blockquote>
-                    <div className="flex items-center justify-center gap-4">
-                        <div className="w-12 h-12 rounded-full bg-zinc-700 flex items-center justify-center text-zinc-300 font-bold">
-                            AS
-                        </div>
-                        <div className="text-left">
-                            <div className="text-white font-bold">Ankit Sharma</div>
-                            <div className="text-zinc-500 text-sm">UPSC Aspirant (Delhi)</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Pricing Section */}
+            {/* Strategic Advantages */}
             <section className="py-24 bg-black">
                 <div className="max-w-7xl mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-white mb-4">Flexible Plans</h2>
-                        <p className="text-zinc-400">Invest in your selection.</p>
+                    <div className="text-center mb-20">
+                        <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter uppercase leading-[0.9]">Master the Arena.</h2>
+                        <p className="text-zinc-500 text-lg font-bold tracking-widest uppercase">The Topper's Feature Stack</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                        {/* Standard Plan */}
-                        <div className="p-8 rounded-3xl bg-zinc-900/50 border border-zinc-800 flex flex-col">
-                            <div className="mb-8">
-                                <h3 className="text-xl font-bold text-white mb-2">Standard Plan</h3>
-                                <div className="flex items-baseline gap-1">
-                                    <span className="text-3xl font-bold text-white">₹229</span>
-                                    <span className="text-zinc-500">/mo</span>
-                                </div>
-                                <p className="text-zinc-400 mt-4 text-sm">Tracks your effort accurately.</p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <FeatureCard
+                            icon={Zap}
+                            title="30-Second Logs"
+                            desc="Log your sessions via WhatsApp. No apps to open, no distractions to avoid. Pure focus."
+                        />
+                        <FeatureCard
+                            icon={Target}
+                            title="AI Strategy Audit"
+                            desc="Every morning, your AI partner summarizes your grit and aligns your focus for the day ahead."
+                            isElite
+                        />
+                        <FeatureCard
+                            icon={Shield}
+                            title="Focus Audits"
+                            desc="Identify 'Dead Study Hours'—times when you are logged in but your output is zero."
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* Pricing Section - Elite Focus */}
+            <section className="py-32 bg-zinc-950 border-y border-white/5 relative">
+                <div className="max-w-7xl mx-auto px-4 text-center">
+                    <h2 className="text-5xl md:text-7xl font-black text-white mb-16 tracking-tighter leading-none uppercase">CHOOSE YOUR <br /><span className="text-amber-500 italic">TRAINING LEVEL.</span></h2>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                        {/* Standard */}
+                        <div className="p-12 rounded-[3rem] bg-zinc-900/30 border border-zinc-800 text-left hover:bg-zinc-900/50 transition-all flex flex-col">
+                            <h3 className="text-2xl font-black text-white mb-2">Standard</h3>
+                            <div className="flex items-baseline mb-8">
+                                <span className="text-5xl font-black text-white">₹199</span>
+                                <span className="text-zinc-500 ml-2 font-black text-[10px] uppercase tracking-widest">/mo</span>
                             </div>
-                            <ul className="space-y-4 mb-8 flex-1">
-                                <li className="flex items-center text-zinc-300 text-sm"><Check className="w-4 h-4 mr-3 text-green-500 shrink-0" /> Smart Logging (Unlimited)</li>
-                                <li className="flex items-center text-zinc-300 text-sm"><Check className="w-4 h-4 mr-3 text-green-500 shrink-0" /> Daily Scorecard (Basic)</li>
-                                <li className="flex items-center text-zinc-300 text-sm"><Check className="w-4 h-4 mr-3 text-green-500 shrink-0" /> Weekly Report (Text Summary)</li>
-                                <li className="flex items-center text-zinc-300 text-sm"><Check className="w-4 h-4 mr-3 text-green-500 shrink-0" /> Syllabus Tracker (Basic)</li>
-                                <li className="flex items-center text-zinc-500 text-sm"><Check className="w-4 h-4 mr-3 text-zinc-700 shrink-0" /> No AI Strategy Coach</li>
-                                <li className="flex items-center text-zinc-500 text-sm"><Check className="w-4 h-4 mr-3 text-zinc-700 shrink-0" /> No Intelligent Nudges</li>
+                            <ul className="space-y-5 mb-12 flex-1">
+                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-3 text-zinc-700" /> WhatsApp Logging</li>
+                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-3 text-zinc-700" /> Daily Scorecard</li>
+                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-3 text-zinc-700" /> Syllabus Progress Tracker</li>
                             </ul>
-                            <Link
-                                href={siteConfig.links.whatsapp}
-                                className="block w-full py-4 text-center rounded-xl border border-zinc-700 text-white font-bold hover:bg-zinc-800 transition-all"
-                            >
-                                Get Standard
+                            <Link href={siteConfig.links.whatsapp} className="block w-full py-5 rounded-2xl text-center border border-zinc-700 text-white font-black uppercase text-xs tracking-widest hover:bg-zinc-800 transition-all">
+                                START TRACKING
                             </Link>
                         </div>
 
-                        {/* Premium Plan */}
-                        <div className="p-8 rounded-3xl bg-zinc-900 border border-amber-500/30 flex flex-col relative overflow-hidden">
-                            <div className="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-xl">RECOMMENDED</div>
-                            <div className="mb-8">
-                                <h3 className="text-xl font-bold text-white mb-2">Premium Plan</h3>
-                                <div className="flex items-baseline gap-1">
-                                    <span className="text-3xl font-bold text-white">₹499</span>
-                                    <span className="text-zinc-500">/mo</span>
-                                </div>
-                                <p className="text-amber-500 mt-4 text-sm font-medium">Optimizes your strategy.</p>
+                        {/* Elite */}
+                        <div className="p-12 rounded-[3rem] bg-black border border-amber-500/50 text-left scale-110 shadow-[0_0_80px_-20px_rgba(245,158,11,0.3)] z-10 flex flex-col">
+                            <div className="absolute top-0 right-10 -translate-y-1/2 bg-amber-500 text-black text-[10px] font-black px-4 py-1.5 rounded-full tracking-[0.2em] shadow-lg">MOST ELITE</div>
+                            <h3 className="text-2xl font-black text-amber-500 mb-2">Discipline Elite</h3>
+                            <div className="flex items-baseline mb-8">
+                                <span className="text-5xl font-black text-white">₹499</span>
+                                <span className="text-zinc-500 ml-2 font-black text-[10px] uppercase tracking-widest">/mo</span>
                             </div>
-                            <ul className="space-y-4 mb-8 flex-1">
-                                <li className="flex items-center text-white text-sm"><Check className="w-4 h-4 mr-3 text-amber-500 shrink-0" /> Smart Logging (Unlimited)</li>
-                                <li className="flex items-center text-white text-sm"><Check className="w-4 h-4 mr-3 text-amber-500 shrink-0" /> Daily Scorecard (AI Personalized)</li>
-                                <li className="flex items-center text-white text-sm"><Check className="w-4 h-4 mr-3 text-amber-500 shrink-0" /> Weekly Report (Detailed PDF)</li>
-                                <li className="flex items-center text-white text-sm"><Check className="w-4 h-4 mr-3 text-amber-500 shrink-0" /> Syllabus Tracker (Heatmap)</li>
-                                <li className="flex items-center text-white text-sm"><Check className="w-4 h-4 mr-3 text-amber-500 shrink-0" /> ✅ AI Strategy Coach</li>
-                                <li className="flex items-center text-white text-sm"><Check className="w-4 h-4 mr-3 text-amber-500 shrink-0" /> ✅ Intelligent Nudges (Proactive)</li>
+                            <ul className="space-y-5 mb-12 flex-1">
+                                <li className="flex items-center text-sm font-black text-white"><Sparkles className="w-5 h-5 mr-3 text-amber-500 animate-pulse" /> Vanity Portfolio URL</li>
+                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-3 text-amber-500" /> AI Strategy Master Audit</li>
+                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-3 text-amber-500" /> 12-Week Prep Velocity</li>
+                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-3 text-amber-500" /> AI Preparation Index</li>
+                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-3 text-amber-500" /> Elite Milestone Gallery</li>
                             </ul>
-                            <Link
-                                href={siteConfig.links.whatsapp}
-                                className="block w-full py-4 text-center rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 text-black font-bold hover:opacity-90 transition-all shadow-lg shadow-amber-500/20"
-                            >
-                                Get Premium
+                            <Link href={siteConfig.links.whatsapp} className="block w-full py-5 rounded-2xl text-center bg-amber-500 text-black font-black uppercase text-xs tracking-[0.2em] hover:bg-amber-400 transition-all shadow-lg">
+                                SECURE YOUR LEGACY
                             </Link>
                         </div>
                     </div>
 
-                    {/* Why Premium? */}
-                    <div className="mt-16 max-w-3xl mx-auto text-center bg-zinc-900/30 rounded-2xl p-8 border border-zinc-800">
-                        <h3 className="text-xl font-bold text-white mb-3">🎯 Why Premium?</h3>
-                        <p className="text-zinc-400 italic">
-                            "The Standard plan tracks your effort. The Premium plan <span className="text-amber-500 font-medium">optimizes your strategy</span>. For the price of a coffee, get an AI Coach that ensures your hard work actually translates to marks."
+                    <div className="mt-24 text-center">
+                        <p className="text-zinc-600 text-sm max-w-2xl mx-auto italic font-medium leading-relaxed uppercase tracking-tighter">
+                            "The Standard plan tracks your effort. The Elite plan builds your identity. Invest in the edge that keeps you ahead of 10 lakh people."
                         </p>
                     </div>
                 </div>
             </section>
 
             {/* Final CTA */}
-            <section className="py-24 text-center">
-                <h2 className="text-3xl font-bold text-white mb-6">Cracking Prelims requires Consistency.</h2>
-                <Link
-                    href={siteConfig.links.whatsapp}
-                    className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold text-black bg-primary rounded-full hover:bg-cyan-400 transition-all"
-                >
-                    Start Your Free Trial
-                </Link>
+            <section className="py-32 bg-black relative flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 bg-amber-500/5 opacity-30 blur-[100px]"></div>
+                <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
+                    <h2 className="text-6xl md:text-9xl font-black text-white mb-10 tracking-tighter leading-none italic">
+                        OWN THE <br /><span className="text-amber-500 uppercase">ARENA.</span>
+                    </h2>
+                    <Link
+                        href={siteConfig.links.whatsapp}
+                        className="inline-flex items-center justify-center px-16 py-6 text-2xl font-black text-black bg-amber-500 rounded-3xl hover:bg-amber-400 transition-all shadow-2xl hover:scale-110 active:scale-95 transform duration-300"
+                    >
+                        JOIN WHATSAPP NOW
+                    </Link>
+                    <p className="mt-8 text-zinc-500 font-black uppercase tracking-[0.5em] text-[10px]">Zero setup friction</p>
+                </div>
             </section>
+        </div>
+    );
+}
+
+function UPSCPoint({ icon: Icon, title, desc }: { icon: any, title: string, desc: string }) {
+    return (
+        <div className="flex gap-5 group">
+            <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-white/5 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:border-amber-500/40 transition-all">
+                <Icon className="w-6 h-6 text-amber-500" />
+            </div>
+            <div>
+                <h4 className="text-xl font-bold text-white mb-1">{title}</h4>
+                <p className="text-zinc-500 text-sm font-medium leading-relaxed">{desc}</p>
+            </div>
+        </div>
+    );
+}
+
+function FeatureCard({ icon: Icon, title, desc, isElite = false }: { icon: any, title: string, desc: string, isElite?: boolean }) {
+    return (
+        <div className={`p-10 rounded-[2.5rem] border transition-all duration-500 flex flex-col items-center text-center group ${isElite
+            ? "bg-amber-500/5 border-amber-500/20 hover:border-amber-500/40"
+            : "bg-zinc-900/30 border-white/5 hover:border-white/10"
+            }`}>
+            <div className={`w-16 h-16 rounded-2xl mb-8 flex items-center justify-center group-hover:scale-110 transition-transform ${isElite ? "bg-amber-500/10 text-amber-500" : "bg-zinc-800 text-zinc-400"
+                }`}>
+                <Icon className="w-8 h-8" />
+            </div>
+            <h3 className="text-2xl font-black mb-4 tracking-tight text-white uppercase">{title}</h3>
+            <p className="text-zinc-500 font-medium leading-relaxed text-sm">{desc}</p>
         </div>
     );
 }

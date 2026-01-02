@@ -1,0 +1,175 @@
+import Link from "next/link";
+import {
+    ArrowRight, Check, FunctionSquare, Atom, Zap,
+    Sparkles, TrendingUp, Shield, Target, History,
+    Compass, Laptop, Binary, Cpu, MousePointer2, Flame
+} from "lucide-react";
+import { siteConfig } from "@/config/site";
+import { WhatsAppMock } from "@/components/WhatsAppMock";
+import { WeeklyReportCard } from "@/components/WeeklyReportCard";
+import { MorningSurprise } from "@/components/MorningSurprise";
+import { JEEDashboardPreview } from "@/components/JEEDashboardPreview";
+
+export default function IITJEEPage() {
+    return (
+        <div className="flex flex-col min-h-screen bg-black selection:bg-purple-500 selection:text-black">
+            {/* Hero Section - The Hook */}
+            <section className="relative pt-32 pb-40 px-4 overflow-hidden">
+                <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[150px] opacity-20 pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[150px] opacity-10 pointer-events-none"></div>
+
+                <div className="max-w-7xl mx-auto flex flex-col items-center text-center relative z-10">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-[10px] font-black uppercase tracking-[0.4em] text-blue-400 bg-blue-400/10 border border-blue-400/20 rounded-full">
+                        RANK ONE PROTOCOL
+                    </div>
+                    <h1 className="text-7xl md:text-9xl font-black text-white mb-10 tracking-tighter leading-[0.85] uppercase">
+                        OWN THE <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-500 italic">
+                            JEE ASCENT.
+                        </span>
+                    </h1>
+                    <p className="text-2xl text-zinc-400 mb-12 leading-relaxed font-medium max-w-3xl mx-auto">
+                        In the war of ranks, data is your only objective weapon. Join the Top 500 with the only high-fidelity dashboard that turns raw grit into a legacy.
+                    </p>
+
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                        <Link
+                            href={siteConfig.links.whatsapp}
+                            className="inline-flex items-center justify-center px-12 py-6 text-xl font-black text-black bg-white rounded-3xl hover:bg-zinc-200 transition-all shadow-[0_0_60px_-15px_rgba(255,255,255,0.3)] transform hover:scale-110 active:scale-95 duration-300"
+                        >
+                            SECURE YOUR PROTOCOL <ArrowRight className="ml-3 h-7 w-7" />
+                        </Link>
+                    </div>
+                </div>
+
+                {/* The "Centerpiece" - Moved up for instant impact */}
+                <div className="mt-32 max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="relative group p-1 rounded-[3rem] bg-gradient-to-b from-white/10 to-transparent">
+                        <div className="absolute -inset-10 bg-blue-500/10 blur-[120px] opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                        <JEEDashboardPreview />
+                    </div>
+                </div>
+            </section>
+
+            {/* Strategic Value Proposition */}
+            <section className="py-32 bg-zinc-950 border-y border-white/5 relative overflow-hidden">
+                <div className="absolute inset-0 bg-grid-white opacity-5"></div>
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-24">
+                        <div className="flex-1">
+                            <div className="inline-block px-4 py-1.5 mb-8 text-[10px] font-black uppercase tracking-widest text-purple-400 bg-purple-400/10 border border-purple-400/20 rounded-full">GOD MODE ARCHITECTURE</div>
+                            <h2 className="text-6xl md:text-8xl font-black text-white mb-10 tracking-tighter leading-none">
+                                PCM DEPTH <br /><span className="italic text-zinc-500 text-glow">OVER SPEED.</span>
+                            </h2>
+                            <p className="text-2xl text-zinc-400 mb-12 font-medium leading-relaxed">
+                                Cracking the Advanced requires deep work, not just logging hours. Our AI Strategist audits your "Persistence Benchmarks" to ensure you're in the Top 1%.
+                            </p>
+                            <div className="space-y-10">
+                                <JEEPoint icon={FunctionSquare} title="Unstoppable Mode Tracking" desc="We filter out low-intensity study and only count the velocity hours where you are solving Advanced-level problems." />
+                                <JEEPoint icon={Binary} title="Syllabus Burn-rate Analytics" desc="Track your Chapter Mastery across PCM with the same precision as a hedge fund manager." />
+                                <JEEPoint icon={Cpu} title="Deadly Accuracy Audit" desc="AI identifies if you are hitting a plateau and pushes you into the 'Deep Work' zone." />
+                            </div>
+                        </div>
+                        <div className="flex-1 flex justify-center lg:justify-end">
+                            <div className="relative h-[650px] w-full max-w-[360px] overflow-hidden rounded-[3rem] border border-white/10 shadow-2xl">
+                                <WhatsAppMock variant="IITJEE" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* AI Auditor Animation */}
+            <section className="py-32 bg-black relative">
+                <div className="max-w-5xl mx-auto px-4">
+                    <div className="text-center mb-16">
+                        <div className="inline-flex items-center gap-2 mb-4 text-purple-500">
+                            <Flame className="w-5 h-5 fill-purple-500" />
+                            <span className="text-[10px] font-black uppercase tracking-[0.4em]">Overnight Performance Audit</span>
+                        </div>
+                        <h3 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter uppercase italic">WAKE UP TO CLARITY</h3>
+                        <p className="text-zinc-500 font-bold uppercase tracking-widest text-[10px] max-w-xl mx-auto">While you sleep, our AI Strategist reconstructs your daily grit into a high-fidelity Preparation Index.</p>
+                    </div>
+                    <MorningSurprise />
+                </div>
+            </section>
+
+            {/* Elite Pricing */}
+            <section className="py-40 bg-zinc-950 relative overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4 text-center">
+                    <h2 className="text-6xl md:text-8xl font-black text-white mb-20 tracking-tighter leading-none uppercase italic">CHOOSE YOUR <br /><span className="text-blue-500">INTENSITY.</span></h2>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto relative z-10">
+                        {/* Standard */}
+                        <div className="p-12 rounded-[3.5rem] bg-zinc-900/30 border border-zinc-800 text-left hover:bg-zinc-900/50 transition-all flex flex-col group">
+                            <h3 className="text-2xl font-black text-white mb-2 group-hover:text-blue-400 transition-colors">Standard</h3>
+                            <div className="flex items-baseline mb-10">
+                                <span className="text-6xl font-black text-white">₹199</span>
+                                <span className="text-zinc-500 ml-2 font-black text-xs uppercase tracking-widest">/mo</span>
+                            </div>
+                            <ul className="space-y-6 mb-16 flex-1">
+                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-4 text-zinc-700" /> WhatsApp Logging</li>
+                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-4 text-zinc-700" /> Daily Logic Scorecard</li>
+                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-4 text-zinc-700" /> Topic Progress Tracking</li>
+                            </ul>
+                            <Link href={siteConfig.links.whatsapp} className="block w-full py-6 rounded-2xl text-center border border-zinc-700 text-white font-black uppercase text-xs tracking-widest hover:bg-zinc-800 transition-all">
+                                START PROTOCOL
+                            </Link>
+                        </div>
+
+                        {/* Elite */}
+                        <div className="p-12 rounded-[3.5rem] bg-black border-2 border-blue-500/50 text-left scale-110 shadow-[0_0_100px_-20px_rgba(59,130,246,0.4)] z-10 flex flex-col relative overflow-hidden">
+                            <div className="absolute top-0 right-10 -translate-y-1/2 bg-blue-500 text-black text-[10px] font-black px-5 py-2 rounded-full tracking-[0.2em] shadow-xl">MOST ELITE</div>
+                            <h3 className="text-2xl font-black text-blue-400 mb-2 uppercase">Discipline Elite</h3>
+                            <div className="flex items-baseline mb-10">
+                                <span className="text-6xl font-black text-white">₹499</span>
+                                <span className="text-zinc-500 ml-2 font-black text-xs uppercase tracking-widest">/mo</span>
+                            </div>
+                            <ul className="space-y-6 mb-16 flex-1">
+                                <li className="flex items-center text-sm font-black text-white"><Sparkles className="w-5 h-5 mr-4 text-blue-400 animate-pulse" /> Vanity Portfolio URL</li>
+                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-4 text-blue-400" /> AI Strategy Master Audit</li>
+                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-4 text-blue-400" /> 12-Week Prep Velocity</li>
+                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-4 text-blue-400" /> God Mode Analytics</li>
+                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-4 text-blue-400" /> Elite Rank predictor</li>
+                            </ul>
+                            <Link href={siteConfig.links.whatsapp} className="block w-full py-6 rounded-2xl text-center bg-blue-500 text-black font-black uppercase text-xs tracking-[0.2em] hover:bg-blue-400 transition-all shadow-xl">
+                                SECURE YOUR IIT SEAT
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Final CTA - Aggressive & High Energy */}
+            <section className="py-40 bg-black relative flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 bg-blue-600/10 opacity-40 blur-[150px] animate-pulse"></div>
+                <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
+                    <h2 className="text-8xl md:text-[12rem] font-black text-white mb-12 tracking-tighter leading-none italic uppercase">
+                        CRUSH THE <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">LIMIT.</span>
+                    </h2>
+                    <Link
+                        href={siteConfig.links.whatsapp}
+                        className="inline-flex items-center justify-center px-20 py-8 text-3xl font-black text-black bg-white rounded-[2rem] hover:bg-zinc-200 transition-all shadow-2xl hover:scale-110 active:scale-95 transform duration-300"
+                    >
+                        JOIN THE 1% NOW
+                    </Link>
+                    <p className="mt-12 text-zinc-500 font-extrabold uppercase tracking-[0.6em] text-xs">Setup in 30 seconds • No distractions</p>
+                </div>
+            </section>
+        </div>
+    );
+}
+
+function JEEPoint({ icon: Icon, title, desc }: { icon: any, title: string, desc: string }) {
+    return (
+        <div className="flex gap-6 group">
+            <div className="w-16 h-16 rounded-[1.5rem] bg-zinc-900 border border-white/5 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:border-blue-500/40 transition-all duration-300">
+                <Icon className="w-8 h-8 text-blue-400" />
+            </div>
+            <div>
+                <h4 className="text-2xl font-black text-white mb-2 tracking-tight group-hover:text-blue-200 transition-colors uppercase italic">{title}</h4>
+                <p className="text-zinc-500 text-lg font-medium leading-relaxed">{desc}</p>
+            </div>
+        </div>
+    );
+}

@@ -20,6 +20,11 @@ export const siteConfig = {
             amount: "₹299",
             period: "month",
             href: "/pay/pro", // Placeholder
+        },
+        elite: {
+            amount: "₹499",
+            period: "month",
+            href: "/pay/elite", // Placeholder
         }
     }
 };
@@ -35,9 +40,9 @@ export const VERTICALS = {
         description: "Physics, Chemistry, Biology. Daily accountability loop.",
         href: "/neet",
     },
-    FITNESS: {
-        name: "Fitness",
-        description: "Consistency > motivation. Log habits and workouts.",
-        href: "/fitness",
+    IITJEE: {
+        name: "IIT-JEE",
+        description: "Physics, Chemistry, Maths. Master the grind for the Top 1%.",
+        href: "/iit-jee",
     }
 };
