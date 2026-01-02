@@ -80,12 +80,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof Bar */}
-      <section className="py-10 bg-black overflow-hidden border-y border-white/5">
+      <section className="py-10 bg-black overflow-hidden border-y border-white/5 relative">
+        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
+        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10"></div>
         <div className="flex whitespace-nowrap overflow-hidden">
           <div className="flex animate-[marquee_25s_linear_infinite] gap-20 items-center">
             {["UPSC", "IIT-JEE", "NEET", "GATE", "CA", "MBA", "MEDICAL", "UPSC", "IIT-JEE", "NEET", "GATE", "CA", "MBA", "MEDICAL"].map((text, i) => (
-              <span key={i} className="text-3xl md:text-5xl font-black text-white/5 uppercase italic tracking-tighter">{text} EXCELLENCE</span>
+              <span key={i} className="text-3xl md:text-5xl font-black text-white/10 uppercase italic tracking-tighter hover:text-white/30 transition-all duration-500 cursor-default">{text} EXCELLENCE</span>
             ))}
           </div>
         </div>
