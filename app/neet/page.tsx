@@ -42,11 +42,36 @@ export default function NEETPage() {
                     </div>
                 </div>
 
-                {/* The "Centerpiece" - Instant Visual impact */}
+                {/* The "Centerpiece" - Dashboard preview */}
                 <div className="mt-32 max-w-7xl mx-auto px-4 relative z-10">
                     <div className="relative group p-1 rounded-[3rem] bg-gradient-to-b from-white/10 to-transparent">
                         <div className="absolute -inset-10 bg-emerald-500/10 blur-[120px] opacity-20 group-hover:opacity-30 transition-opacity"></div>
                         <NEETDashboardPreview />
+                    </div>
+                </div>
+            </section>
+
+            {/* Domain Specific: Active Retrieval Audit */}
+            <section className="py-32 bg-zinc-950 relative overflow-hidden border-y border-white/5">
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-24">
+                        <div className="flex-1">
+                            <div className="inline-block px-4 py-1.5 mb-8 text-[10px] font-black uppercase tracking-widest text-emerald-500 bg-emerald-500/10 border border-emerald-500/20 rounded-full">NCERT VELOCITY</div>
+                            <h2 className="text-6xl md:text-[5rem] font-black text-white mb-10 tracking-tighter leading-none uppercase">
+                                SURGICAL <br /><span className="italic text-zinc-500">RETRIEVAL.</span>
+                            </h2>
+                            <p className="text-2xl text-zinc-400 mb-12 font-medium leading-relaxed">
+                                NEET is a game of recall. Our AI doesn't just track hours; it audits how many times you've cycled through the NCERT diagrams and core concepts.
+                            </p>
+                            <div className="space-y-10">
+                                <NEETPoint icon={Microscope} title="Concept Rotation Audit" desc="AI ensures you never let a high-yield Biology chapter go 'cold' for more than 10 days." />
+                                <NEETPoint icon={Dna} title="Diagram Mastery Index" desc="Log your active recall sessions for Biology diagrams and get a readiness score." />
+                                <NEETPoint icon={Target} title="Error Velocity Tracking" desc="Monitor how fast you learn from mock test mistakes. Shrink the gap to 720." />
+                            </div>
+                        </div>
+                        <div className="flex-1 flex justify-center lg:justify-end">
+                            <ProductMockupHero variant="NEET" />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -85,7 +110,10 @@ export default function NEETPage() {
                             </div>
                         </div>
                         <div className="flex-1 flex justify-center lg:justify-end">
-                            <ProductMockupHero variant="NEET" />
+                            <div className="relative group p-1 rounded-[3rem] bg-gradient-to-b from-white/10 to-transparent">
+                                <div className="absolute -inset-10 bg-emerald-500/20 blur-[100px] opacity-10 group-hover:opacity-20 transition-opacity"></div>
+                                <WeeklyReportCard variant="NEET" />
+                            </div>
                         </div>
                     </div>
                 </div>

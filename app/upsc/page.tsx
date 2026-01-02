@@ -3,12 +3,13 @@ import {
     ArrowRight, Check, BookOpen, Brain, Target,
     TrendingUp, Trophy, CheckCircle, Bell, Calendar,
     Award, MessageSquare, Sun, AlertTriangle, Zap,
-    Star, Sparkles, Shield, Compass, Scale, History
+    Star, Sparkles, Shield, Compass, Scale, History, PenTool
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { WhatsAppMock } from "@/components/WhatsAppMock";
 import { WeeklyReportCard } from "@/components/WeeklyReportCard";
 import { MorningSurprise } from "@/components/MorningSurprise";
+import { UPSCDashboardPreview } from "@/components/UPSCDashboardPreview";
 import { ProductMockupHero } from "@/components/LiveSessionHero";
 
 export default function UPSCPage() {
@@ -50,8 +51,38 @@ export default function UPSCPage() {
                         </div>
                     </div>
 
-                    <div className="flex-1 flex justify-center lg:justify-end">
-                        <ProductMockupHero variant="UPSC" />
+                </div>
+
+                {/* The "Centerpiece" - Moved up for consistency with NEET/JEE */}
+                <div className="mt-32 max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="relative group p-1 rounded-[3rem] bg-gradient-to-b from-white/10 to-transparent">
+                        <div className="absolute -inset-10 bg-amber-500/10 blur-[120px] opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                        <UPSCDashboardPreview />
+                    </div>
+                </div>
+            </section>
+
+            {/* Domain Specific: Answer Writing Calibration */}
+            <section className="py-32 bg-zinc-950 relative overflow-hidden border-y border-white/5">
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-24">
+                        <div className="flex-1">
+                            <div className="inline-block px-4 py-1.5 mb-8 text-[10px] font-black uppercase tracking-widest text-amber-500 bg-amber-500/10 border border-amber-500/20 rounded-full">MAINS VELOCITY</div>
+                            <h2 className="text-6xl md:text-[5rem] font-black text-white mb-10 tracking-tighter leading-none uppercase">
+                                CALIBRATE EVERY <br /><span className="italic text-zinc-500">LINE WRITTEN.</span>
+                            </h2>
+                            <p className="text-2xl text-zinc-400 mb-12 font-medium leading-relaxed">
+                                The exam isn't won by how much you know, but by how much you can express under pressure. Our AI audits your answer writing frequency and duration.
+                            </p>
+                            <div className="space-y-10">
+                                <UPSCPoint icon={PenTool} title="Answer Writing Heartbeat" desc="AI tracks how many answers you write daily. Consistency in expression is the only way to the IAS." />
+                                <UPSCPoint icon={History} title="GS-Option Integration" desc="Ensure your study hours are balanced between General Studies and your Optional subject automatically." />
+                                <UPSCPoint icon={Target} title="The 0.1% Benchmark" desc="Compare your daily grit with the performance benchmarks of previous year rankers." />
+                            </div>
+                        </div>
+                        <div className="flex-1 flex justify-center lg:justify-end">
+                            <ProductMockupHero variant="UPSC" />
+                        </div>
                     </div>
                 </div>
             </section>
