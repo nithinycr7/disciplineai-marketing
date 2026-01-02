@@ -19,38 +19,35 @@ export default function UPSCPage() {
             <section className="relative pt-32 pb-24 px-4 overflow-hidden bg-grid-white">
                 <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[120px] opacity-20 pointer-events-none"></div>
 
-                <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10">
-                    <div className="flex-1">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-[10px] font-black uppercase tracking-[0.3em] text-amber-500 bg-amber-500/10 border border-amber-500/20 rounded-full">
-                            FOR SERIOUS TOPPERS ONLY
-                        </div>
-                        <h1 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-[0.9]">
-                            BUILD YOUR <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-yellow-600 italic">
-                                TOPPER LEGACY.
-                            </span>
-                        </h1>
-                        <p className="text-xl text-zinc-400 mb-10 leading-relaxed font-medium max-w-xl">
-                            The old study logging is history. Join the Top 1% with a portfolio that <b>automatically tracks your progress</b> and delivers the <b>AI feedback</b> to secure your legacy.
-                        </p>
+                <div className="max-w-7xl mx-auto flex flex-col items-center text-center relative z-10">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-[10px] font-black uppercase tracking-[0.3em] text-amber-500 bg-amber-500/10 border border-amber-500/20 rounded-full">
+                        FOR SERIOUS TOPPERS ONLY
+                    </div>
+                    <h1 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-[0.9]">
+                        BUILD YOUR <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-yellow-600 italic">
+                            TOPPER LEGACY.
+                        </span>
+                    </h1>
+                    <p className="text-xl text-zinc-400 mb-10 leading-relaxed font-medium max-w-2xl mx-auto">
+                        The old study logging is history. Join the Top 1% with a portfolio that <b>automatically tracks your progress</b> and delivers the <b>AI feedback</b> to secure your legacy.
+                    </p>
 
-                        <div className="flex flex-col sm:flex-row gap-5">
-                            <Link
-                                href={siteConfig.links.whatsapp}
-                                className="inline-flex items-center justify-center px-10 py-5 text-lg font-black text-black bg-amber-500 rounded-2xl hover:bg-amber-400 transition-all shadow-[0_0_40px_-10px_rgba(245,158,11,0.5)] transform hover:scale-105 active:scale-95"
-                            >
-                                SECURE YOUR POSITION <ArrowRight className="ml-3 h-6 w-6" />
-                            </Link>
-                        </div>
-
-                        <div className="mt-12 flex items-center gap-4">
-                            <div className="flex -space-x-2">
-                                {[1, 2, 3].map(i => <div key={i} className="w-8 h-8 rounded-full bg-zinc-800 border-2 border-black flex items-center justify-center text-[8px] font-bold">U{i}</div>)}
-                            </div>
-                            <p className="text-xs text-zinc-500 font-bold uppercase tracking-widest">Trusted by serious aspirants</p>
-                        </div>
+                    <div className="flex flex-col sm:flex-row gap-5 justify-center">
+                        <Link
+                            href={siteConfig.links.whatsapp}
+                            className="inline-flex items-center justify-center px-10 py-5 text-lg font-black text-black bg-amber-500 rounded-2xl hover:bg-amber-400 transition-all shadow-[0_0_40px_-10px_rgba(245,158,11,0.5)] transform hover:scale-105 active:scale-95"
+                        >
+                            SECURE YOUR POSITION <ArrowRight className="ml-3 h-6 w-6" />
+                        </Link>
                     </div>
 
+                    <div className="mt-12 flex items-center gap-4 justify-center">
+                        <div className="flex -space-x-2">
+                            {[1, 2, 3].map(i => <div key={i} className="w-8 h-8 rounded-full bg-zinc-800 border-2 border-black flex items-center justify-center text-[8px] font-bold">U{i}</div>)}
+                        </div>
+                        <p className="text-xs text-zinc-500 font-bold uppercase tracking-widest">Trusted by serious aspirants</p>
+                    </div>
                 </div>
 
                 {/* The "Centerpiece" - Moved up for consistency with NEET/JEE */}
