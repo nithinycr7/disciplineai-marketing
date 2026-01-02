@@ -9,6 +9,7 @@ import { WhatsAppMock } from "@/components/WhatsAppMock";
 import { WeeklyReportCard } from "@/components/WeeklyReportCard";
 import { MorningSurprise } from "@/components/MorningSurprise";
 import { NEETDashboardPreview } from "@/components/NEETDashboardPreview";
+import { LiveSessionHero } from "@/components/LiveSessionHero";
 
 export default function NEETPage() {
     return (
@@ -28,7 +29,7 @@ export default function NEETPage() {
                         </span>
                     </h1>
                     <p className="text-2xl text-zinc-400 mb-12 leading-relaxed font-medium max-w-3xl mx-auto">
-                        In the race for AIIMS, consistency is the ultimate surgical tool. Join the top 1% with the high-fidelity dashboard designed for NCERT mastery.
+                        The old study logging is history. Join the Top 1% with a portfolio that <b>automatically tracks your progress</b> and delivers the <b>AI feedback</b> to secure your legacy.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -84,10 +85,7 @@ export default function NEETPage() {
                             </div>
                         </div>
                         <div className="flex-1 flex justify-center lg:justify-end">
-                            <div className="relative group p-1 rounded-[3rem] bg-gradient-to-b from-white/10 to-transparent">
-                                <div className="absolute -inset-10 bg-emerald-500/20 blur-[100px] opacity-10 group-hover:opacity-20 transition-opacity"></div>
-                                <WeeklyReportCard variant="NEET" />
-                            </div>
+                            <LiveSessionHero variant="NEET" />
                         </div>
                     </div>
                 </div>

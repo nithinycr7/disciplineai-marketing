@@ -9,6 +9,7 @@ import { WhatsAppMock } from "@/components/WhatsAppMock";
 import { WeeklyReportCard } from "@/components/WeeklyReportCard";
 import { MorningSurprise } from "@/components/MorningSurprise";
 import { JEEDashboardPreview } from "@/components/JEEDashboardPreview";
+import { LiveSessionHero } from "@/components/LiveSessionHero";
 
 export default function IITJEEPage() {
     return (
@@ -29,7 +30,7 @@ export default function IITJEEPage() {
                         </span>
                     </h1>
                     <p className="text-2xl text-zinc-400 mb-12 leading-relaxed font-medium max-w-3xl mx-auto">
-                        In the war of ranks, data is your only objective weapon. Join the Top 500 with the only high-fidelity dashboard that turns raw grit into a legacy.
+                        The old study logging is history. Join the Top 1% with a portfolio that <b>automatically tracks your progress</b> and delivers the <b>AI feedback</b> to secure your legacy.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -71,9 +72,7 @@ export default function IITJEEPage() {
                             </div>
                         </div>
                         <div className="flex-1 flex justify-center lg:justify-end">
-                            <div className="relative h-[650px] w-full max-w-[360px] overflow-hidden rounded-[3rem] border border-white/10 shadow-2xl">
-                                <WhatsAppMock variant="IITJEE" />
-                            </div>
+                            <LiveSessionHero variant="IITJEE" />
                         </div>
                     </div>
                 </div>

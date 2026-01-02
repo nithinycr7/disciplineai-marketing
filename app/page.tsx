@@ -10,6 +10,7 @@ import { Stats } from "@/components/Stats";
 import { ElitePreview } from "@/components/ElitePreview";
 import { MorningSurprise } from "@/components/MorningSurprise";
 import { siteConfig, VERTICALS } from "@/config/site";
+import { LiveSessionHero } from "@/components/LiveSessionHero";
 
 export default function Home() {
   return (
@@ -36,7 +37,7 @@ export default function Home() {
               </h1>
 
               <p className="text-xl text-zinc-400 max-w-lg leading-relaxed font-medium">
-                The old study habits are dead. Join the Top 1% with an AI-powered Digital Portfolio that turns raw grit into a high-fidelity legacy.
+                The old study logging is history. Join the Top 1% with a portfolio that <b>automatically tracks your progress</b> and delivers the <b>AI feedback</b> to secure your legacy.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-5">
@@ -73,31 +74,7 @@ export default function Home() {
             </div>
 
             <div className="relative flex justify-center lg:justify-end animate-float">
-              <div className="relative w-full max-w-[340px] h-[550px] overflow-hidden rounded-t-[3.5rem] border-x border-t border-white/20 shadow-2xl glass-card">
-                <div className="absolute inset-x-0 top-0 h-10 bg-black/40 backdrop-blur-md z-30 flex items-center justify-center">
-                  <div className="w-20 h-4 bg-zinc-800 rounded-full"></div>
-                </div>
-                <div className="absolute inset-0 bg-primary/20 blur-[80px] -z-10 rounded-full opacity-30 animate-pulse"></div>
-                <Image
-                  src="/hero_phone_final.png"
-                  alt="Discipline.AI App Interface"
-                  fill
-                  className="object-contain object-top drop-shadow-2xl z-10 pt-12"
-                  priority
-                />
-                <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black via-black/80 to-transparent z-20"></div>
-
-                {/* Floating Micro-UI for landing */}
-                <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 w-full px-6">
-                  <div className="bg-white/10 backdrop-blur-xl border border-white/10 p-4 rounded-2xl shadow-2xl">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-[10px] text-zinc-400 font-bold uppercase tracking-widest">Live Session</span>
-                      <span className="text-[10px] text-primary font-bold animate-pulse">SYNCING...</span>
-                    </div>
-                    <div className="text-xl font-black text-white">4h 45m Polity</div>
-                  </div>
-                </div>
-              </div>
+              <LiveSessionHero />
             </div>
           </div>
         </div>

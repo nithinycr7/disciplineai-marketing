@@ -9,6 +9,7 @@ import { siteConfig } from "@/config/site";
 import { WhatsAppMock } from "@/components/WhatsAppMock";
 import { WeeklyReportCard } from "@/components/WeeklyReportCard";
 import { MorningSurprise } from "@/components/MorningSurprise";
+import { LiveSessionHero } from "@/components/LiveSessionHero";
 
 export default function UPSCPage() {
     return (
@@ -29,7 +30,7 @@ export default function UPSCPage() {
                             </span>
                         </h1>
                         <p className="text-xl text-zinc-400 mb-10 leading-relaxed font-medium max-w-xl">
-                            UPSC isn't just an exam; it's a war of attrition. Step into the Top 1% with the <b>Discipline Elite Portfolio</b>—the only system that proves your grit to the world.
+                            The old study logging is history. Join the Top 1% with a portfolio that <b>automatically tracks your progress</b> and delivers the <b>AI feedback</b> to secure your legacy.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-5">
@@ -50,24 +51,7 @@ export default function UPSCPage() {
                     </div>
 
                     <div className="flex-1 flex justify-center lg:justify-end">
-                        <div className="relative h-[600px] w-full max-w-[340px] overflow-hidden rounded-t-[3rem] border-x border-t border-white/10 glass-card">
-                            <div className="absolute inset-0 bg-amber-500/10 blur-[80px] -z-10 rounded-full opacity-30"></div>
-                            <WhatsAppMock variant="UPSC" />
-                            <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black via-black/80 to-transparent z-20"></div>
-
-                            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 w-full px-6">
-                                <div className="bg-amber-500/10 backdrop-blur-xl border border-amber-500/20 p-4 rounded-2xl shadow-2xl">
-                                    <div className="flex items-center justify-between mb-1">
-                                        <span className="text-[9px] text-amber-500 font-black uppercase tracking-widest">Syllabus Mastered</span>
-                                        <span className="text-[9px] text-zinc-400 font-bold">Week 12</span>
-                                    </div>
-                                    <div className="text-xl font-black text-white">72% Polity</div>
-                                    <div className="mt-2 h-1 w-full bg-zinc-800 rounded-full overflow-hidden">
-                                        <div className="h-full bg-amber-500 w-[72%]" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <LiveSessionHero variant="UPSC" />
                     </div>
                 </div>
             </section>
