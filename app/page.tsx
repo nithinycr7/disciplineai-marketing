@@ -210,10 +210,6 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center mb-16">
-            <h3 className="text-3xl font-black text-white mb-4 tracking-tighter uppercase italic">WAKE UP TO CLARITY</h3>
-            <p className="text-zinc-500 font-bold uppercase tracking-widest text-[10px]">While you sleep, your AI partner audits your strategy for the day ahead.</p>
-          </div>
           <MorningSurprise />
         </div>
       </section>

@@ -106,14 +106,6 @@ export default function IITJEEPage() {
             {/* AI Auditor Animation */}
             <section className="py-32 bg-black relative">
                 <div className="max-w-5xl mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <div className="inline-flex items-center gap-2 mb-4 text-purple-500">
-                            <Zap className="w-5 h-5 fill-purple-500" />
-                            <span className="text-[10px] font-black uppercase tracking-[0.4em]">Overnight Strategy Audit</span>
-                        </div>
-                        <h3 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter uppercase italic">WAKE UP TO CLARITY</h3>
-                        <p className="text-zinc-500 font-bold uppercase tracking-widest text-[10px] max-w-xl mx-auto">While you sleep, our AI Strategist reconstructed your study hours into a surgical-grade Preparation Index.</p>
-                    </div>
                     <MorningSurprise />
                 </div>
             </section>

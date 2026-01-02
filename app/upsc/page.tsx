@@ -87,10 +87,6 @@ export default function UPSCPage() {
             {/* AI Auditor Section */}
             <section className="py-32 bg-black relative">
                 <div className="max-w-7xl mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <h3 className="text-3xl font-black text-white mb-4 tracking-tighter uppercase italic">WAKE UP TO CLARITY</h3>
-                        <p className="text-zinc-500 font-bold uppercase tracking-widest text-[10px]">Your UPSC strategist audits your daily focus while you sleep.</p>
-                    </div>
                     <MorningSurprise />
                 </div>
             </section>
