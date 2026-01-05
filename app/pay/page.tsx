@@ -7,42 +7,48 @@ function PayContent() {
     const searchParams = useSearchParams();
     const sid = searchParams.get("sid");
 
-    useEffect(() => {
-        if (typeof window === "undefined") return;
+    const startPayment = async () => {
+        if (!sid || !sid.startsWith("sub_")) {
+            alert("Invalid or missing subscription id");
+            return;
+        }
 
-        const loadRazorpay = () => {
-            const script = document.createElement("script");
-            script.src = "https://checkout.razorpay.com/v1/checkout.js";
-            script.async = true;
-            script.onload = () => startPayment();
-            document.body.appendChild(script);
-        };
+        try {
+            const res = await fetch(
+                `https://discipline-ai-vmachsds5q-el.a.run.app/api/checkout-options?sid=${encodeURIComponent(sid)}`
+            );
+            const opts = await res.json();
 
-        const startPayment = async () => {
-            if (!sid || !sid.startsWith("sub_")) {
-                alert("Invalid or missing subscription id");
+            if (opts.error) {
+                alert(opts.error);
                 return;
             }
 
-            try {
-                const res = await fetch(
-                    `https://discipline-ai-vmachsds5q-el.a.run.app/api/checkout-options?sid=${encodeURIComponent(sid)}`
-                );
-                const opts = await res.json();
+            const rzp = new (window as any).Razorpay(opts);
+            rzp.open();
+        } catch (err) {
+            alert("Network error. Please check your connection.");
+        }
+    };
 
-                if (opts.error) {
-                    alert(opts.error);
-                    return;
-                }
+    useEffect(() => {
+        if (typeof window === "undefined") return;
 
-                const rzp = new (window as any).Razorpay(opts);
-                rzp.open();
-            } catch (err) {
-                alert("Network error. Please check your connection.");
+        const script = document.createElement("script");
+        script.src = "https://checkout.razorpay.com/v1/checkout.js";
+        script.async = true;
+        script.onload = () => {
+            // Auto-trigger payment after script loads
+            setTimeout(() => startPayment(), 500);
+        };
+        document.body.appendChild(script);
+
+        return () => {
+            // Cleanup
+            if (script.parentNode) {
+                script.parentNode.removeChild(script);
             }
         };
-
-        loadRazorpay();
     }, [sid]);
 
     return (
@@ -90,7 +96,7 @@ function PayContent() {
                 </p>
 
                 <button
-                    onClick={() => window.location.reload()}
+                    onClick={startPayment}
                     style={{
                         width: "100%",
                         padding: 16,
