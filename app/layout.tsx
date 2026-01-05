@@ -5,6 +5,7 @@ import { siteConfig } from "@/config/site";
 import { cn } from "@/utils/cn";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { WhatsAppSticky } from "@/components/WhatsAppSticky";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -43,6 +44,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <WhatsAppSticky />
       </body>
     </html>
   );

@@ -42,12 +42,7 @@ export default function UPSCPage() {
                         </Link>
                     </div>
 
-                    <div className="mt-12 flex items-center gap-4 justify-center">
-                        <div className="flex -space-x-2">
-                            {[1, 2, 3].map(i => <div key={i} className="w-8 h-8 rounded-full bg-zinc-800 border-2 border-black flex items-center justify-center text-[8px] font-bold">U{i}</div>)}
-                        </div>
-                        <p className="text-xs text-zinc-500 font-bold uppercase tracking-widest">Trusted by serious aspirants</p>
-                    </div>
+
                 </div>
 
                 {/* The "Centerpiece" - Moved up for consistency with NEET/JEE */}

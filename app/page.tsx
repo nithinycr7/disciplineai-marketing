@@ -55,22 +55,7 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="pt-8 flex items-center gap-6">
-                <div className="flex -space-x-3">
-                  {[1, 2, 3, 4, 5].map(i => (
-                    <div key={i} className="w-10 h-10 rounded-full bg-zinc-900 border-2 border-black flex items-center justify-center text-[10px] font-black overflow-hidden relative">
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent"></div>
-                      <span>U{i}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="flex flex-col">
-                  <div className="flex text-amber-500 scale-75 -ml-4">
-                    {[1, 2, 3, 4, 5].map(i => <Star key={i} className="fill-current h-4 w-4" />)}
-                  </div>
-                  <p className="text-xs text-zinc-500 font-bold tracking-tight uppercase">Trusted by 2,000+ Toppers</p>
-                </div>
-              </div>
+
             </div>
 
             <div className="relative flex justify-center lg:justify-end animate-float">
