@@ -154,7 +154,7 @@ export default function UPSCPage() {
                         <div className="p-12 rounded-[3rem] bg-zinc-900/30 border border-zinc-800 text-left hover:bg-zinc-900/50 transition-all flex flex-col">
                             <h3 className="text-2xl font-black text-white mb-2">Standard</h3>
                             <div className="flex items-baseline mb-8">
-                                <span className="text-5xl font-black text-white">₹199</span>
+                                <span className="text-5xl font-black text-white">₹149</span>
                                 <span className="text-zinc-500 ml-2 font-black text-[10px] uppercase tracking-widest">/mo</span>
                             </div>
                             <ul className="space-y-5 mb-12 flex-1">
@@ -172,7 +172,7 @@ export default function UPSCPage() {
                             <div className="absolute top-0 right-10 -translate-y-1/2 bg-amber-500 text-black text-[10px] font-black px-4 py-1.5 rounded-full tracking-[0.2em] shadow-lg">MOST ELITE</div>
                             <h3 className="text-2xl font-black text-amber-500 mb-2">Discipline Elite</h3>
                             <div className="flex items-baseline mb-8">
-                                <span className="text-5xl font-black text-white">₹399</span>
+                                <span className="text-5xl font-black text-white">₹299</span>
                                 <span className="text-zinc-500 ml-2 font-black text-[10px] uppercase tracking-widest">/mo</span>
                             </div>
                             <ul className="space-y-5 mb-12 flex-1">

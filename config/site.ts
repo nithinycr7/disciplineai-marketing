@@ -13,13 +13,13 @@ export const siteConfig = {
     pricing: {
         standard: {
             name: "Standard",
-            amount: "₹199",
+            amount: "₹149",
             period: "month",
             features: ["7-Day Free Trial", "Unlimited WhatsApp tracking", "Weekly reports"],
         },
         elite: {
             name: "Elite",
-            amount: "₹399",
+            amount: "₹299",
             period: "month",
             features: ["Standard + Custom Public Portfolio", "Priority AI Insights"],
         }
