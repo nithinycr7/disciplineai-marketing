@@ -40,10 +40,10 @@ export function Footer() {
                     <div>
                         <h4 className="text-white font-black uppercase tracking-widest text-[10px] mb-6">Legal</h4>
                         <ul className="space-y-4">
-                            <FooterLink href="/privacy" label="Privacy Protocol" />
-                            <FooterLink href="/terms" label="Terms of Merit" />
-                            <FooterLink href="/refunds" label="Refunds & Cancellation" />
-                            <FooterLink href="/shipping" label="Shipping Policy" />
+                            <FooterLink href="/privacy" label="Privacy Policy" />
+                            <FooterLink href="/terms" label="Terms and Conditions" />
+                            <FooterLink href="/refunds" label="Cancellation and Refund Policy" />
+                            <FooterLink href="/shipping" label="Shipping and Delivery Policy" />
                             <FooterLink href="/contact" label="Contact Us" />
                         </ul>
                     </div>
