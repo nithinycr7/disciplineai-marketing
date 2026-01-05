@@ -47,8 +47,8 @@ export function Navbar() {
                     {/* Desktop Menu */}
                     <div className="hidden lg:flex items-center space-x-10">
                         <NavLink href={VERTICALS.UPSC.href} label={VERTICALS.UPSC.name} />
-                        <NavLink href={VERTICALS.NEET.href} label={VERTICALS.NEET.name} />
-                        <NavLink href={VERTICALS.IITJEE.href} label={VERTICALS.IITJEE.name} />
+                        {/* <NavLink href={VERTICALS.NEET.href} label={VERTICALS.NEET.name} /> */}
+                        {/* <NavLink href={VERTICALS.IITJEE.href} label={VERTICALS.IITJEE.name} /> */}
 
                         <Link
                             href={siteConfig.links.whatsapp}
@@ -82,8 +82,8 @@ export function Navbar() {
                         <div className="bg-zinc-950/95 backdrop-blur-3xl border border-white/5 rounded-[2rem] p-6 shadow-2xl">
                             <div className="space-y-2">
                                 <MobileNavLink href={VERTICALS.UPSC.href} label={VERTICALS.UPSC.name} onClick={() => setIsOpen(false)} />
-                                <MobileNavLink href={VERTICALS.NEET.href} label={VERTICALS.NEET.name} onClick={() => setIsOpen(false)} />
-                                <MobileNavLink href={VERTICALS.IITJEE.href} label={VERTICALS.IITJEE.name} onClick={() => setIsOpen(false)} />
+                                {/* <MobileNavLink href={VERTICALS.NEET.href} label={VERTICALS.NEET.name} onClick={() => setIsOpen(false)} />
+                                <MobileNavLink href={VERTICALS.IITJEE.href} label={VERTICALS.IITJEE.name} onClick={() => setIsOpen(false)} /> */}
 
                                 <Link
                                     href={siteConfig.links.whatsapp}

@@ -131,19 +131,19 @@ export default function UPSCPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <FeatureCard
                             icon={Zap}
-                            title="30-Second Logs"
-                            desc="Log your sessions via WhatsApp. No apps to open, no distractions to avoid. Pure focus."
+                            title="Conversational Logging"
+                            desc="Log study sessions in natural language (e.g., 'Polity - DPSP - 2h') directly on WhatsApp. Zero friction."
                         />
                         <FeatureCard
                             icon={Target}
-                            title="AI Strategy Audit"
-                            desc="Every morning, your AI partner summarizes your grit and aligns your focus for the day ahead."
+                            title="Daily Reality Check"
+                            desc="Morning performance deltas vs goals and evening check-ins. Know if you moved the needle on the syllabus."
                             isElite
                         />
                         <FeatureCard
                             icon={Shield}
-                            title="Focus Audits"
-                            desc="Identify 'Dead Study Hours'—times when you are logged in but your output is zero."
+                            title="Sunday Reality Report"
+                            desc="Hard-hitting weekly summary with AI-driven motivation every Sunday at 23:00 IST."
                         />
                     </div>
                 </div>
@@ -177,7 +177,7 @@ export default function UPSCPage() {
                             <div className="absolute top-0 right-10 -translate-y-1/2 bg-amber-500 text-black text-[10px] font-black px-4 py-1.5 rounded-full tracking-[0.2em] shadow-lg">MOST ELITE</div>
                             <h3 className="text-2xl font-black text-amber-500 mb-2">Discipline Elite</h3>
                             <div className="flex items-baseline mb-8">
-                                <span className="text-5xl font-black text-white">₹499</span>
+                                <span className="text-5xl font-black text-white">₹399</span>
                                 <span className="text-zinc-500 ml-2 font-black text-[10px] uppercase tracking-widest">/mo</span>
                             </div>
                             <ul className="space-y-5 mb-12 flex-1">
@@ -195,7 +195,7 @@ export default function UPSCPage() {
 
                     <div className="mt-24 text-center">
                         <p className="text-zinc-600 text-sm max-w-2xl mx-auto italic font-medium leading-relaxed uppercase tracking-tighter">
-                            "The Standard plan tracks your effort. The Elite plan builds your identity. Invest in the edge that keeps you ahead of 10 lakh people."
+                            "DISCIPLINE.AI is not a tool; it's a Digital Mentor. It ensures that by the time exam day arrives, you don't just 'feel' ready—you have the data to know you are ready."
                         </p>
                     </div>
                 </div>

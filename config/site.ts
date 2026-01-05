@@ -4,27 +4,24 @@ export const siteConfig = {
     url: "https://discipline.ai", // Placeholder
     ogImage: "https://discipline.ai/og.jpg", // Placeholder
     links: {
-        whatsapp: "https://wa.me/91XXXXXXXXXX?text=Hi%20DisciplineAI%20I%20want%20to%20start",
+        whatsapp: "https://wa.me/916309873325?text=START",
         twitter: "https://twitter.com/discipline_ai",
     },
     contact: {
-        email: "support@discipline.ai",
+        email: "support@discipline-ai.in",
     },
     pricing: {
-        starter: {
+        standard: {
+            name: "Standard",
             amount: "₹199",
             period: "month",
-            href: "/pay/starter", // Placeholder
-        },
-        pro: {
-            amount: "₹299",
-            period: "month",
-            href: "/pay/pro", // Placeholder
+            features: ["7-Day Free Trial", "Unlimited WhatsApp tracking", "Weekly reports"],
         },
         elite: {
-            amount: "₹499",
+            name: "Elite",
+            amount: "₹399",
             period: "month",
-            href: "/pay/elite", // Placeholder
+            features: ["Standard + Custom Public Portfolio", "Priority AI Insights"],
         }
     }
 };

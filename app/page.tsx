@@ -100,8 +100,7 @@ export default function Home() {
             <span className="text-zinc-700 italic">FAIL THE MARATHON.</span>
           </h2>
           <p className="text-xl text-zinc-500 mb-16 font-medium leading-relaxed">
-            It's not a lack of IQ. It's the invisible friction of manual tracking, zero accountability, and preparation isolation.
-            You're working 12 hours, but to the world, you're just sitting in a room.
+            Aspirants suffer from <b>"Productivity Illusion"</b> and <b>"Isolation-Induced Burnout."</b> You study for 10 hours but don't know if you moved the needle on the syllabus. DISCIPLINE.AI provides the <b>Reality Check</b>.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
@@ -147,8 +146,8 @@ export default function Home() {
                 />
                 <SystemPoint
                   icon={Zap}
-                  title="AI Accountability Partner"
-                  desc="Proactive nudges. Sunday reality checks. It knows when you're slacking before you do and pushes you back into the Arena."
+                  title="Progressive Planning Cycle"
+                  desc="07:00 IST Morning Delta, 21:30 IST Evening Nudges, and the 23:00 IST Sunday Reality Report. Collaborative target setting every Sunday night."
                 />
               </div>
             </div>
@@ -226,37 +225,25 @@ export default function Home() {
             <p className="text-zinc-400 font-medium text-lg">Choose your level of edge. Most Elite spots are limited.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
             <PricingCard
-              title="Starter"
-              price={siteConfig.pricing.starter.amount}
-              features={["WhatsApp Logging", "Basic Reporting", "7-Day History"]}
-              btnText="START TRIAL"
+              title={siteConfig.pricing.standard.name}
+              price={siteConfig.pricing.standard.amount}
+              features={siteConfig.pricing.standard.features}
+              btnText="START FREE TRIAL"
             />
             <PricingCard
-              title="Pro"
-              price={siteConfig.pricing.pro.amount}
-              features={["Deep Subject Analytics", "AI Syllabus Tracker", "Priority AI Response", "Unlimited History"]}
-              btnText="GET PRO"
-            />
-            <PricingCard
-              title="Discipline Elite"
+              title={siteConfig.pricing.elite.name}
               price={siteConfig.pricing.elite.amount}
               isElite
-              features={[
-                "Vanity Portfolio URL",
-                "Glassmorphism Dashboard",
-                "AI Preparation Index",
-                "Prep Velocity Charts",
-                "Strategy Alignment Audit"
-              ]}
+              features={siteConfig.pricing.elite.features}
               btnText="STEP INTO THE 1%"
             />
           </div>
 
           <div className="mt-24 text-center">
             <p className="text-zinc-600 text-sm max-w-2xl mx-auto italic font-medium leading-relaxed">
-              "At ₹499/month, you aren't paying for a dashboard. You're paying for the psychological edge that keeps you in front of 10 lakh people. Invest in the discipline that makes you a Topper."
+              "DISCIPLINE.AI is not a tool; it's a Digital Mentor. It ensures that by the time exam day arrives, you don't just 'feel' ready—you have the data to know you are ready."
             </p>
           </div>
         </div>
@@ -266,10 +253,10 @@ export default function Home() {
       <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 text-white/20 font-black tracking-[1em] uppercase text-xs">Specialized Domains</div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <VerticalCard vertical={VERTICALS.UPSC} />
-            <VerticalCard vertical={VERTICALS.NEET} />
-            <VerticalCard vertical={VERTICALS.IITJEE} />
+          <div className="flex justify-center">
+            <div className="max-w-md w-full">
+              <VerticalCard vertical={VERTICALS.UPSC} />
+            </div>
           </div>
         </div>
       </section>

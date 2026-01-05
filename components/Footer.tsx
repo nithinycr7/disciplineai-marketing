@@ -32,8 +32,8 @@ export function Footer() {
                         <h4 className="text-white font-black uppercase tracking-widest text-[10px] mb-6">Protocols</h4>
                         <ul className="space-y-4">
                             <FooterLink href="/upsc" label="UPSC Topper" />
-                            <FooterLink href="/neet" label="NEET Excellence" />
-                            <FooterLink href="/iit-jee" label="IIT-JEE Protocol" />
+                            {/* <FooterLink href="/neet" label="NEET Excellence" />
+                            <FooterLink href="/iit-jee" label="IIT-JEE Protocol" /> */}
                         </ul>
                     </div>
 

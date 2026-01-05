@@ -5,13 +5,13 @@ import { useEffect, useState } from "react";
 import { Sparkles, Brain, TrendingUp, Clock } from "lucide-react";
 
 export function MorningSurprise() {
-    const [time, setTime] = useState("01:30");
+    const [time, setTime] = useState("06:45");
     const [stage, setStage] = useState(0); // 0: Sleeping, 1: AI Working, 2: Morning Reveal
 
     useEffect(() => {
         const timer = setTimeout(() => {
             if (stage === 0) {
-                setTime("03:30");
+                setTime("06:55");
                 setStage(1);
             } else if (stage === 1) {
                 setTimeout(() => setStage(2), 2000);
@@ -99,7 +99,7 @@ export function MorningSurprise() {
                                 <Sparkles className="h-3 w-3" />
                                 DAILY PERFORMANCE UNLOCKED
                             </div>
-                            <h3 className="text-3xl font-bold text-white mb-2">Wake up to Clarity.</h3>
+                            <h3 className="text-3xl font-bold text-white mb-2">Wake up to Clarity (07:00 IST).</h3>
                             <p className="text-zinc-400">Your AI Preparation Index has been updated based on yesterday's 12.5h session.</p>
                         </div>
 
