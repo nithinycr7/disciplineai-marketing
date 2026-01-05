@@ -42,6 +42,9 @@ export function Footer() {
                         <ul className="space-y-4">
                             <FooterLink href="/privacy" label="Privacy Protocol" />
                             <FooterLink href="/terms" label="Terms of Merit" />
+                            <FooterLink href="/refunds" label="Refunds & Cancellation" />
+                            <FooterLink href="/shipping" label="Shipping Policy" />
+                            <FooterLink href="/contact" label="Contact Us" />
                         </ul>
                     </div>
                 </div>

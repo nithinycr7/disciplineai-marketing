@@ -80,7 +80,7 @@ export default function Privacy() {
                             For any questions about this Privacy Policy, please contact us at <a href={`mailto:${siteConfig.contact.email}`} className="text-zinc-400 hover:text-white transition-colors">{siteConfig.contact.email}</a>.
                         </p>
                         <p className="text-zinc-500 text-sm mt-4">
-                            By using Discipline.AI, you also agree to our <Link href="#" className="underline">Terms of Service</Link>.
+                            By using Discipline.AI, you also agree to our <Link href="/terms" className="underline">Terms of Service</Link>.
                         </p>
                     </section>
                 </div>
