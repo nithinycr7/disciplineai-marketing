@@ -1,0 +1,12 @@
+{
+    "routes": [
+        {
+            "route": "/pay",
+            "redirect": "/pay/",
+            "statusCode": 301
+        }
+    ],
+    "navigationFallback": {
+        "rewrite": "/404.html"
+    }
+}
