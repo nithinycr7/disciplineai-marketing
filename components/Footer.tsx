@@ -50,7 +50,7 @@ export function Footer() {
                 </div>
 
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold text-zinc-600 uppercase tracking-[0.2em]">
-                    <p>&copy; {new Date().getFullYear()} DISCIPLINE AI CLUB. OWNED BY YSGN DIGITAL INNOVATIVE AI SOLUTIONS PRIVATE LIMITED. ALL RIGHTS RESERVED.</p>
+                    <p>&copy; {new Date().getFullYear()} DISCIPLINE-AI. OWNED BY YSGN DIGITAL INNOVATIVE AI SOLUTIONS PRIVATE LIMITED. ALL RIGHTS RESERVED.</p>
                     <div className="flex gap-8">
                         <span>MADE FOR THE 1%</span>
                         <span>POWERED BY GPT-4O</span>
