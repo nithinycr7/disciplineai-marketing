@@ -120,13 +120,13 @@ export default function IITJEEPage() {
                         <div className="p-12 rounded-[3.5rem] bg-zinc-900/30 border border-zinc-800 text-left hover:bg-zinc-900/50 transition-all flex flex-col scale-95 opacity-80">
                             <h3 className="text-2xl font-black text-white mb-2">Standard</h3>
                             <div className="flex items-baseline mb-10">
-                                <span className="text-6xl font-black text-white">₹199</span>
+                                <span className="text-6xl font-black text-white">₹99</span>
                                 <span className="text-zinc-500 ml-2 font-black text-xs uppercase tracking-widest">/mo</span>
                             </div>
                             <ul className="space-y-6 mb-16 flex-1">
-                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-4 text-zinc-700" /> WhatsApp Logging</li>
-                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-4 text-zinc-700" /> Daily Scorecard</li>
-                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-4 text-zinc-700" /> Chapter Progress Tracker</li>
+                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-4 text-zinc-700" /> WhatsApp-Based Study Tracking</li>
+                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-4 text-zinc-700" /> Learning Portfolio with Snapshots</li>
+                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-4 text-zinc-700" /> Weekly Progress Reports</li>
                             </ul>
                             <Link href={siteConfig.links.whatsapp} className="block w-full py-6 rounded-2xl text-center border border-zinc-700 text-white font-black uppercase text-xs tracking-widest hover:bg-zinc-800 transition-all">
                                 START TRACKING
@@ -138,15 +138,14 @@ export default function IITJEEPage() {
                             <div className="absolute top-0 right-10 -translate-y-1/2 bg-blue-500 text-black text-[10px] font-black px-5 py-2 rounded-full tracking-[0.2em] shadow-lg">MOST ELITE</div>
                             <h3 className="text-2xl font-black text-blue-500 mb-2 uppercase">Discipline Elite</h3>
                             <div className="flex items-baseline mb-10">
-                                <span className="text-6xl font-black text-white">₹499</span>
+                                <span className="text-6xl font-black text-white">₹149</span>
                                 <span className="text-zinc-500 ml-2 font-black text-xs uppercase tracking-widest">/mo</span>
                             </div>
                             <ul className="space-y-6 mb-16 flex-1">
-                                <li className="flex items-center text-sm font-black text-white"><Sparkles className="w-5 h-5 mr-4 text-blue-500 animate-pulse" /> Vanity Portfolio URL</li>
-                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-4 text-blue-500" /> AI Strategy Master Audit</li>
-                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-4 text-blue-500" /> 12-Week Prep Velocity</li>
-                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-4 text-blue-500" /> AI Preparation Index</li>
-                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-4 text-blue-500" /> Elite Milestone Gallery</li>
+                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-4 text-blue-500" /> Everything in Standard</li>
+                                <li className="flex items-center text-sm font-black text-white"><Sparkles className="w-5 h-5 mr-4 text-blue-500 animate-pulse" /> AI-Powered Intelligence Insights</li>
+                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-4 text-blue-500" /> Personalized Test Analytics</li>
+                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-4 text-blue-500" /> Achievement Milestones & Badges</li>
                             </ul>
                             <Link href={siteConfig.links.whatsapp} className="block w-full py-6 rounded-2xl text-center bg-blue-500 text-black font-black uppercase text-xs tracking-[0.2em] hover:bg-blue-400 transition-all shadow-lg">
                                 SECURE YOUR PROTOCOL

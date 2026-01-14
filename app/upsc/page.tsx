@@ -154,13 +154,13 @@ export default function UPSCPage() {
                         <div className="p-12 rounded-[3rem] bg-zinc-900/30 border border-zinc-800 text-left hover:bg-zinc-900/50 transition-all flex flex-col">
                             <h3 className="text-2xl font-black text-white mb-2">Standard</h3>
                             <div className="flex items-baseline mb-8">
-                                <span className="text-5xl font-black text-white">₹149</span>
+                                <span className="text-5xl font-black text-white">₹99</span>
                                 <span className="text-zinc-500 ml-2 font-black text-[10px] uppercase tracking-widest">/mo</span>
                             </div>
                             <ul className="space-y-5 mb-12 flex-1">
-                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-3 text-zinc-700" /> WhatsApp Logging</li>
-                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-3 text-zinc-700" /> Daily Scorecard</li>
-                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-3 text-zinc-700" /> Syllabus Progress Tracker</li>
+                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-3 text-zinc-700" /> WhatsApp-Based Study Tracking</li>
+                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-3 text-zinc-700" /> Learning Portfolio with Snapshots</li>
+                                <li className="flex items-center text-sm font-bold text-zinc-300"><Check className="w-5 h-5 mr-3 text-zinc-700" /> Weekly Progress Reports</li>
                             </ul>
                             <Link href={siteConfig.links.whatsapp} className="block w-full py-5 rounded-2xl text-center border border-zinc-700 text-white font-black uppercase text-xs tracking-widest hover:bg-zinc-800 transition-all">
                                 START TRACKING
@@ -172,15 +172,14 @@ export default function UPSCPage() {
                             <div className="absolute top-0 right-10 -translate-y-1/2 bg-amber-500 text-black text-[10px] font-black px-4 py-1.5 rounded-full tracking-[0.2em] shadow-lg">MOST ELITE</div>
                             <h3 className="text-2xl font-black text-amber-500 mb-2">Discipline Elite</h3>
                             <div className="flex items-baseline mb-8">
-                                <span className="text-5xl font-black text-white">₹299</span>
+                                <span className="text-5xl font-black text-white">₹149</span>
                                 <span className="text-zinc-500 ml-2 font-black text-[10px] uppercase tracking-widest">/mo</span>
                             </div>
                             <ul className="space-y-5 mb-12 flex-1">
-                                <li className="flex items-center text-sm font-black text-white"><Sparkles className="w-5 h-5 mr-3 text-amber-500 animate-pulse" /> Vanity Portfolio URL</li>
-                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-3 text-amber-500" /> AI Strategy Master Audit</li>
-                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-3 text-amber-500" /> 12-Week Prep Velocity</li>
-                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-3 text-amber-500" /> AI Preparation Index</li>
-                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-3 text-amber-500" /> Elite Milestone Gallery</li>
+                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-3 text-amber-500" /> Everything in Standard</li>
+                                <li className="flex items-center text-sm font-black text-white"><Sparkles className="w-5 h-5 mr-3 text-amber-500 animate-pulse" /> AI-Powered Intelligence Insights</li>
+                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-3 text-amber-500" /> Personalized Test Analytics</li>
+                                <li className="flex items-center text-sm font-black text-white"><Check className="w-5 h-5 mr-3 text-amber-500" /> Achievement Milestones & Badges</li>
                             </ul>
                             <Link href={siteConfig.links.whatsapp} className="block w-full py-5 rounded-2xl text-center bg-amber-500 text-black font-black uppercase text-xs tracking-[0.2em] hover:bg-amber-400 transition-all shadow-lg">
                                 SECURE YOUR LEGACY

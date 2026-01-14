@@ -39,9 +39,9 @@ export function Navbar() {
                             <Image
                                 src="/logo_full.jpg"
                                 alt="DISCIPLINE.AI - Map. Measure. Master."
-                                width={180}
-                                height={45}
-                                className="h-8 w-auto group-hover:scale-105 transition-transform"
+                                width={320}
+                                height={80}
+                                className="h-16 w-auto group-hover:scale-105 transition-transform"
                                 priority
                             />
                         </Link>

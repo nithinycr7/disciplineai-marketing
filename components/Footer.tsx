@@ -15,9 +15,9 @@ export function Footer() {
                             <Image
                                 src="/logo_full.jpg"
                                 alt="DISCIPLINE.AI - Map. Measure. Master."
-                                width={200}
-                                height={50}
-                                className="h-10 w-auto"
+                                width={400}
+                                height={100}
+                                className="h-20 w-auto"
                             />
                         </Link>
                         <p className="text-zinc-500 max-w-sm mb-8 font-medium leading-relaxed">

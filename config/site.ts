@@ -13,15 +13,15 @@ export const siteConfig = {
     pricing: {
         standard: {
             name: "Standard",
-            amount: "₹149",
+            amount: "₹99",
             period: "month",
-            features: ["7-Day Free Trial", "Unlimited WhatsApp tracking", "Weekly reports"],
+            features: ["WhatsApp-Based Study Tracking", "Learning Portfolio with Snapshots", "Weekly Progress Reports"],
         },
         elite: {
             name: "Elite",
-            amount: "₹299",
+            amount: "₹149",
             period: "month",
-            features: ["Standard + Custom Public Portfolio", "Priority AI Insights"],
+            features: ["Everything in Standard", "AI-Powered Intelligence Insights", "Personalized Test Analytics", "Achievement Milestones & Badges"],
         }
     }
 };
