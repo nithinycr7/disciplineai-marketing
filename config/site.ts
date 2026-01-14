@@ -4,7 +4,7 @@ export const siteConfig = {
     url: "https://discipline-ai.in",
     ogImage: "https://discipline.ai/og.jpg", // Placeholder
     links: {
-        whatsapp: "https://wa.me/916309873325?text=START",
+        whatsapp: "https://wa.me/917416585225?text=START",
         twitter: "https://twitter.com/discipline_ai",
     },
     contact: {

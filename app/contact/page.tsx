@@ -42,7 +42,7 @@ export default function Contact() {
                     <h2 className="text-2xl font-bold text-white mb-4">Merchant Information</h2>
                     <div className="space-y-4 text-zinc-400">
                         <p><strong>Legal Name:</strong> DISCIPLINE AI CLUB</p>
-                        <p><strong>Phone:</strong> +91 6309873325</p>
+                        <p><strong>Phone:</strong> +91 7416585225</p>
                         <p><strong>Email:</strong> support@discipline-ai.in</p>
                         <p><strong>Registered Address:</strong> Hyderabad, Telangana, India - 500032</p>
                         <p><strong>Operational Address:</strong> Hyderabad, Telangana, India - 500032</p>
