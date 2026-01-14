@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
-import { Menu, X, ArrowRight, Zap } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { siteConfig, VERTICALS } from "@/config/site";
 import { cn } from "@/utils/cn";
 import { motion, AnimatePresence } from "framer-motion";
@@ -34,13 +35,15 @@ export function Navbar() {
 
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
-                        <Link href="/" className="group flex items-center gap-2">
-                            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(6,182,212,0.5)]">
-                                <Zap className="w-5 h-5 text-black fill-current" />
-                            </div>
-                            <span className="text-xl font-black tracking-tighter text-white">
-                                DISCIPLINE<span className="text-primary italic">.AI</span>
-                            </span>
+                        <Link href="/" className="group flex items-center">
+                            <Image
+                                src="/logo_full.jpg"
+                                alt="DISCIPLINE.AI - Map. Measure. Master."
+                                width={180}
+                                height={45}
+                                className="h-8 w-auto group-hover:scale-105 transition-transform"
+                                priority
+                            />
                         </Link>
                     </div>
 

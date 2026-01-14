@@ -1,6 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
-import { Zap, Twitter, Mail, MessageCircle } from "lucide-react";
+import { Twitter, Mail, MessageCircle } from "lucide-react";
 
 export function Footer() {
     return (
@@ -10,13 +11,14 @@ export function Footer() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                     <div className="md:col-span-2">
-                        <Link href="/" className="flex items-center gap-2 mb-6">
-                            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                                <Zap className="w-5 h-5 text-black fill-current" />
-                            </div>
-                            <span className="text-xl font-black tracking-tighter text-white uppercase">
-                                DISCIPLINE<span className="text-primary italic">.AI</span>
-                            </span>
+                        <Link href="/" className="inline-block mb-6">
+                            <Image
+                                src="/logo_full.jpg"
+                                alt="DISCIPLINE.AI - Map. Measure. Master."
+                                width={200}
+                                height={50}
+                                className="h-10 w-auto"
+                            />
                         </Link>
                         <p className="text-zinc-500 max-w-sm mb-8 font-medium leading-relaxed">
                             The first AI-native protocol for serious aspirants. Transform your raw grit into an unbreakable identity.
