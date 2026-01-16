@@ -10,6 +10,12 @@ import { WeeklyReportCard } from "@/components/WeeklyReportCard";
 import { MorningSurprise } from "@/components/MorningSurprise";
 import { NEETDashboardPreview } from "@/components/NEETDashboardPreview";
 import { ProductMockupHero } from "@/components/LiveSessionHero";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "NEET Medical Entrance Tracker | Biology, Physics, Chemistry Audit",
+    description: "Secure your white coat with Discipline.ai. The only AI study tracker that audits your NCERT retention and question-solving speed on WhatsApp.",
+};
 
 export default function NEETPage() {
     return (

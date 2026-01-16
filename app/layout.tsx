@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
   },
+  verification: {
+    google: "google-site-verification=YOUR_CODE", //TODO: Add actual code
+  },
 };
 
 export default function RootLayout({

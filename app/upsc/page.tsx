@@ -11,6 +11,12 @@ import { WeeklyReportCard } from "@/components/WeeklyReportCard";
 import { MorningSurprise } from "@/components/MorningSurprise";
 import { UPSCDashboardPreview } from "@/components/UPSCDashboardPreview";
 import { ProductMockupHero } from "@/components/LiveSessionHero";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "UPSC Discipline Protocol | AI Study Tracker for IAS Aspirants",
+    description: "The top 1% of UPSC aspirants track every hour. Join the elite with Discipline.ai - the WhatsApp-based study tracker that audits your consistency and answer writing.",
+};
 
 export default function UPSCPage() {
     return (

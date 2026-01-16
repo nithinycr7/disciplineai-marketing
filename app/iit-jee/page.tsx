@@ -10,6 +10,12 @@ import { WeeklyReportCard } from "@/components/WeeklyReportCard";
 import { MorningSurprise } from "@/components/MorningSurprise";
 import { JEEDashboardPreview } from "@/components/JEEDashboardPreview";
 import { ProductMockupHero } from "@/components/LiveSessionHero";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "IIT-JEE Advanced Tracker | Physics, Chemistry, Maths Analytics",
+    description: "Crack JEE Advanced with data, not just effort. Discipline.ai tracks your problem-solving velocity and subject mastery directly from WhatsApp.",
+};
 
 export default function IITJEEPage() {
     return (
