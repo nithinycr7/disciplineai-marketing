@@ -121,6 +121,8 @@
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       box-shadow: 0 0 20px -5px rgba(6, 182, 212, 0.5);
       display: none;
+      align-items: center;
+      justify-content: center;
     }
 
     button:hover {
@@ -157,39 +159,36 @@
       Please allow popups if the checkout doesn't open.
     </p>
   </div>
-
   <script>
     const state = {
       sid: null,
+      token: null,
       razorpayReady: false,
       checkoutOptions: null,
       opened: false,
       triedAuto: false
     };
-
     function setStatus(text) {
       document.getElementById("status").textContent = text;
     }
-
     function showPrimary(label, onClick) {
       const btn = document.getElementById("primaryBtn");
       btn.style.display = "inline-flex";
       btn.textContent = label;
       btn.onclick = onClick;
     }
-
     function hidePrimary() {
       const btn = document.getElementById("primaryBtn");
       btn.style.display = "none";
       btn.onclick = null;
     }
-
-    function getSid() {
+    function getParams() {
       const p = new URLSearchParams(location.search);
-      const sid = p.get("sid");
-      return sid;
+      return {
+        sid: p.get("sid"),
+        token: p.get("token")
+      };
     }
-
     function loadRazorpayScript() {
       return new Promise((resolve, reject) => {
         if (window.Razorpay) return resolve();
@@ -200,19 +199,23 @@
         document.head.appendChild(s);
       });
     }
-
-    async function fetchCheckoutOptions(sid) {
-      const url = `https://discipline-ai-vmachsds5q-el.a.run.app/api/checkout-options?sid=${encodeURIComponent(sid)}`;
+    async function fetchCheckoutOptions(params) {
+      let url = `https://discipline-ai-vmachsds5q-el.a.run.app/api/checkout-options`;
+      const queryParams = new URLSearchParams();
+      if (params.token) queryParams.set("token", params.token);
+      else if (params.sid) queryParams.set("sid", params.sid);
+      url += `?${queryParams.toString()}`;
       const res = await fetch(url, { method: "GET" });
-      if (!res.ok) throw new Error("Failed to fetch checkout options");
-      return res.json();
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || "Failed to fetch checkout options");
+      }
+      return data;
     }
-
     function openCheckout() {
       if (!window.Razorpay) throw new Error("Razorpay not ready");
       if (!state.checkoutOptions) throw new Error("Checkout options missing");
       if (state.opened) return;
-
       const options = {
         ...state.checkoutOptions,
         name: "DISCIPLINE.AI",
@@ -222,17 +225,16 @@
         },
         modal: {
           ondismiss: function () {
-            setStatus("Payment window closed. Tap Pay Now to try again.");
+            setStatus("Wait! Payment not complete. Tap Pay Now to try again.");
             showPrimary("Pay Now", safeUserOpen);
+            state.opened = false; // Allow reopening
           }
         }
       };
-
       const rzp = new window.Razorpay(options);
       rzp.open();
       state.opened = true;
     }
-
     function safeUserOpen() {
       try {
         setStatus("Opening Razorpay checkout…");
@@ -243,42 +245,37 @@
         showPrimary("Retry Payment", safeUserOpen);
       }
     }
-
     async function init() {
-      state.sid = getSid();
-
-      if (!state.sid || !state.sid.startsWith("sub_")) {
-        setStatus("Invalid or missing subscription id.");
+      const params = getParams();
+      state.sid = params.sid;
+      state.token = params.token;
+      if (!state.token && (!state.sid || !state.sid.startsWith("sub_"))) {
+        setStatus("Invalid or expired payment link. Please use PAY command to get a new one.");
         showPrimary("Go Back", () => window.history.back());
         return;
       }
-
       hidePrimary();
       setStatus("Initializing secure payment…");
-
       try {
         const [_, options] = await Promise.all([
           loadRazorpayScript(),
-          fetchCheckoutOptions(state.sid)
+          fetchCheckoutOptions(params)
         ]);
-
         state.checkoutOptions = options;
         state.triedAuto = true;
         setStatus("Opening secure payment gateway…");
-
         try {
+          // Note: On mobile/certain browsers, auto-open might be blocked
           openCheckout();
         } catch (e) {
-          setStatus("Tap Pay Now to continue.");
+          setStatus("Secure gateway ready. Tap Pay Now to continue.");
           showPrimary("Pay Now", safeUserOpen);
         }
-
       } catch (e) {
-        setStatus("Network or gateway issue. Tap Retry.");
+        setStatus(e.message || "Network or gateway issue. Tap Retry.");
         showPrimary("Retry Payment", init);
       }
     }
-
     window.addEventListener("load", init);
   </script>
 </body>
