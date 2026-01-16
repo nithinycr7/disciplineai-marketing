@@ -1,7 +1,7 @@
 export const siteConfig = {
     name: "DISCIPLINE.AI",
     description: "Discipline, delivered on WhatsApp. Log in 30 seconds. Get nudged. Stay consistent.",
-    url: "https://discipline-ai.in",
+    url: "https://www.discipline-ai.in",
     ogImage: "https://discipline.ai/og.jpg", // Placeholder
     links: {
         whatsapp: "https://wa.me/917416585225?text=START",
