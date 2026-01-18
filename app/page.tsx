@@ -31,7 +31,7 @@ export default function Home() {
 
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-8">
                 DISCIPLINE.AI – <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-200 to-blue-500 text-glow">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-200 to-blue-500 text-glow italic">
                   The AI System That Measures Your Discipline
                 </span>
               </h1>
