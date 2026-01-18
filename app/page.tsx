@@ -29,9 +29,9 @@ export default function Home() {
                 The 1% Club Protocol
               </div>
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-8">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.3] mb-8 pb-4">
                 DISCIPLINE.AI – <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-200 to-blue-500 text-glow italic">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-200 to-blue-500 text-glow italic inline-block py-2">
                   The AI System That Measures Your Discipline
                 </span>
               </h1>
@@ -108,37 +108,40 @@ export default function Home() {
 
       {/* The System: Friction-Free */}
       <section className="py-24 bg-zinc-950 border-y border-white/5 relative overflow-hidden">
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-20 items-center">
-            <div className="flex-1">
-              <div className="inline-block px-4 py-1.5 mb-6 text-xs font-black uppercase tracking-widest text-primary bg-primary/10 border border-primary/20 rounded-full">The Protocol</div>
-              <h2 className="text-5xl md:text-7xl font-black text-white mb-10 tracking-tighter leading-none">
-                How DISCIPLINE.AI works <br />
-                <span className="italic text-zinc-400">for UPSC, NEET & JEE.</span>
-              </h2>
-              <div className="space-y-10">
-                <SystemPoint
-                  icon={MessageSquare}
-                  title="WhatsApp-Native Intelligence"
-                  desc="No apps. No distractions (Reels/Shorts). Discipline lives where you already chat. Zero friction, 100% adherence."
-                />
-                <SystemPoint
-                  icon={BrainCircuit}
-                  title="NLP AI Log Processor"
-                  desc="Just text: 'Subject – Topic – Duration'. Example: 'Polity – DPSP – 2 hours'. In 5 seconds, our AI maps it to your syllabus, calculates Mastery Points, and updates your Dashboard."
-                />
-                <SystemPoint
-                  icon={Zap}
-                  title="Progressive Planning Cycle"
-                  desc="07:00 IST Morning Delta, 21:30 IST Evening Nudges, and the 23:00 IST Sunday Reality Report. Collaborative target setting every Sunday night."
-                />
-              </div>
-            </div>
-            <div className="flex-1 relative">
-              <div className="absolute -inset-10 bg-primary/20 blur-[120px] opacity-20 rounded-full animate-pulse"></div>
-              <WhatsAppMock />
-            </div>
+          <div className="text-center mb-20">
+            <div className="inline-block px-4 py-1.5 mb-6 text-xs font-black uppercase tracking-widest text-primary bg-primary/10 border border-primary/20 rounded-full">How it works</div>
+            <h2 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tighter leading-none">
+              The Discipline AI <span className="italic text-zinc-400">System.</span>
+            </h2>
+            <p className="text-zinc-500 max-w-2xl mx-auto text-lg font-medium">
+              Zero friction. No apps. Just results. We've built the most efficient way to track study hours without breaking your focus.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+            {/* Connecting Line for Desktop */}
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/20 to-transparent -translate-y-24"></div>
+
+            <SystemPoint
+              icon={MessageSquare}
+              title="1. WhatsApp-Native"
+              desc="No apps. No distractions. Discipline lives where you already chat. Just text us to start your day."
+              center
+            />
+            <SystemPoint
+              icon={BrainCircuit}
+              title="2. AI Log Processor"
+              desc="Text like 'Polity - DPSP - 2h'. Our AI maps it to your syllabus and Mastery Points in 5 seconds."
+              center
+            />
+            <SystemPoint
+              icon={Zap}
+              title="3. Intelligent Performance"
+              desc="Daily morning summaries and intelligent tracking at your finger tips. Real-time portfolio insights to keep you on track."
+              center
+            />
           </div>
         </div>
       </section>
@@ -295,15 +298,15 @@ export default function Home() {
   );
 }
 
-function SystemPoint({ icon: Icon, title, desc }: { icon: any, title: string, desc: string }) {
+function SystemPoint({ icon: Icon, title, desc, center = false }: { icon: any, title: string, desc: string, center?: boolean }) {
   return (
-    <div className="flex gap-6 group">
-      <div className="w-14 h-14 rounded-2xl bg-zinc-900 border border-white/5 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:border-primary/40 transition-all">
-        <Icon className="w-7 h-7 text-primary" />
+    <div className={`flex ${center ? 'flex-col items-center text-center' : 'gap-6'} group relative z-10`}>
+      <div className={`w-16 h-16 rounded-2xl bg-zinc-900 border border-white/5 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:border-primary/40 transition-all ${center ? 'mb-6 shadow-2xl' : ''}`}>
+        <Icon className="w-8 h-8 text-primary" />
       </div>
       <div>
-        <h4 className="text-2xl font-bold text-white mb-2">{title}</h4>
-        <p className="text-zinc-500 font-medium leading-relaxed">{desc}</p>
+        <h4 className="text-2xl font-bold text-white mb-3 tracking-tight">{title}</h4>
+        <p className="text-zinc-500 font-medium leading-relaxed max-w-sm mx-auto">{desc}</p>
       </div>
     </div>
   );
