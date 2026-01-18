@@ -1,6 +1,6 @@
 export const siteConfig = {
     name: "DISCIPLINE.AI",
-    description: "DISCIPLINE.AI is Not a chat bot. Not a coach. Just mirror of your preparation. Turn your daily study into measurable progress.",
+    description: "DISCIPLINE.AI is a WhatsApp-native AI system that tracks real study, measures syllabus coverage, and builds a public discipline portfolio for UPSC, NEET & JEE aspirants.",
     url: "https://www.discipline-ai.in",
     ogImage: "https://discipline.ai/og.jpg", // Placeholder
     links: {

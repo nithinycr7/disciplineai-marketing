@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
+    default: "DISCIPLINE.AI – AI-Powered Study Discipline & UPSC/NEET Tracking",
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -49,6 +49,37 @@ export default function RootLayout({
         </main>
         <Footer />
         <WhatsAppSticky />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "DISCIPLINE.AI",
+                "url": "https://discipline-ai.in",
+                "logo": "https://discipline-ai.in/logo.png",
+                "description": "AI-powered WhatsApp study discipline tracking system for UPSC, NEET and JEE aspirants.",
+                "sameAs": [
+                  "https://www.linkedin.com/company/discipline-ai",
+                  "https://twitter.com/discipline_ai"
+                ]
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": "DISCIPLINE.AI",
+                "applicationCategory": "EducationalApplication",
+                "operatingSystem": "WhatsApp",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "99",
+                  "priceCurrency": "INR"
+                }
+              }
+            ])
+          }}
+        />
       </body>
     </html>
   );

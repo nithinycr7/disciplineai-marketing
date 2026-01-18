@@ -29,10 +29,10 @@ export default function Home() {
                 The 1% Club Protocol
               </div>
 
-              <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-white leading-[0.9]">
-                BUILD YOUR <br />
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1] mb-8">
+                DISCIPLINE.AI – <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-200 to-blue-500 text-glow">
-                  ELITE IDENTITY.
+                  The AI System That Measures Your Discipline
                 </span>
               </h1>
 
@@ -81,8 +81,7 @@ export default function Home() {
       <section className="py-24 bg-black relative">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter">
-            99% OF ASPIRANTS <br />
-            <span className="text-zinc-700 italic">FAIL THE MARATHON.</span>
+            What is <span className="text-primary">Discipline AI?</span>
           </h2>
           <p className="text-xl text-zinc-500 mb-16 font-medium leading-relaxed">
             Aspirants suffer from <b>"Productivity Illusion"</b>. Success in <b>Competitive Exams</b> is not about how much you study. It’s about knowing what is working — and what is not. DISCIPLINE.AI provides the <b>Reality Check</b>.
@@ -115,8 +114,8 @@ export default function Home() {
             <div className="flex-1">
               <div className="inline-block px-4 py-1.5 mb-6 text-xs font-black uppercase tracking-widest text-primary bg-primary/10 border border-primary/20 rounded-full">The Protocol</div>
               <h2 className="text-5xl md:text-7xl font-black text-white mb-10 tracking-tighter leading-none">
-                TRACKING AS <br />
-                <span className="italic text-zinc-400">INVISIBLE AS AIR.</span>
+                How DISCIPLINE.AI works <br />
+                <span className="italic text-zinc-400">for UPSC, NEET & JEE.</span>
               </h2>
               <div className="space-y-10">
                 <SystemPoint
@@ -265,6 +264,31 @@ export default function Home() {
             START ON WHATSAPP
           </Link>
           <p className="mt-8 text-zinc-500 font-bold uppercase tracking-widest text-[10px]">Setup in 30 seconds</p>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-zinc-950 border-t border-white/5">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-4xl font-black text-white mb-12 tracking-tighter text-center">Frequently Asked Questions</h2>
+          <div className="space-y-12">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-4">What is DISCIPLINE.AI?</h3>
+              <p className="text-zinc-400 leading-relaxed text-lg">DISCIPLINE.AI is an AI-powered discipline tracking system for competitive exam aspirants. It works on WhatsApp and converts daily study logs into analytics, syllabus coverage, and a verifiable discipline portfolio.</p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-4">Is DISCIPLINE.AI a coaching institute?</h3>
+              <p className="text-zinc-400 leading-relaxed text-lg">No. DISCIPLINE.AI does not teach or provide content. It measures what you actually study and shows whether your preparation is working. It is <b>not a coaching platform</b>.</p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-4">Which exams does DISCIPLINE.AI support?</h3>
+              <p className="text-zinc-400 leading-relaxed text-lg">Currently UPSC Civil Services, NEET UG, and JEE (beta).</p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-4">How is DISCIPLINE.AI different from study planners?</h3>
+              <p className="text-zinc-400 leading-relaxed text-lg">Study planners plan intentions. DISCIPLINE.AI audits reality using timestamps, analytics, and test performance.</p>
+            </div>
+          </div>
         </div>
       </section>
     </div >
