@@ -1,6 +1,6 @@
 export const siteConfig = {
     name: "DISCIPLINE.AI",
-    description: "Discipline, delivered on WhatsApp. Log in 30 seconds. Get nudged. Stay consistent.",
+    description: "DISCIPLINE.AI is Not a chat bot. Not a coach. Just mirror of your preparation. Turn your daily study into measurable progress.",
     url: "https://www.discipline-ai.in",
     ogImage: "https://discipline.ai/og.jpg", // Placeholder
     links: {
@@ -14,12 +14,14 @@ export const siteConfig = {
         standard: {
             name: "Standard",
             amount: "₹99",
+            originalAmount: "₹149",
             period: "month",
             features: ["WhatsApp-Based Study Tracking", "Learning Portfolio with Snapshots", "Weekly Progress Reports"],
         },
         elite: {
             name: "Elite",
             amount: "₹149",
+            originalAmount: "₹249",
             period: "month",
             features: ["Everything in Standard", "AI-Powered Intelligence Insights", "Personalized Test Analytics", "Achievement Milestones & Badges"],
         }

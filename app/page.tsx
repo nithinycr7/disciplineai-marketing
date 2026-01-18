@@ -37,7 +37,7 @@ export default function Home() {
               </h1>
 
               <p className="text-xl text-zinc-400 max-w-lg leading-relaxed font-medium">
-                The old study logging is history. Join the Top 1% with a portfolio that <b>automatically tracks your progress</b> and delivers the <b>AI feedback</b> to secure your legacy.
+                The old study logging is history. <b>DISCIPLINE.AI is Not a chat bot. Not a coach. Just mirror of your preparation.</b> It turns your daily study into measurable progress.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-5">
@@ -63,7 +63,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       <section className="py-10 bg-black overflow-hidden border-y border-white/5 relative">
         <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
@@ -85,7 +85,7 @@ export default function Home() {
             <span className="text-zinc-700 italic">FAIL THE MARATHON.</span>
           </h2>
           <p className="text-xl text-zinc-500 mb-16 font-medium leading-relaxed">
-            Aspirants suffer from <b>"Productivity Illusion"</b> and <b>"Isolation-Induced Burnout."</b> You study for 10 hours but don't know if you moved the needle on the syllabus. DISCIPLINE.AI provides the <b>Reality Check</b>.
+            Aspirants suffer from <b>"Productivity Illusion"</b>. Success in <b>Competitive Exams</b> is not about how much you study. It’s about knowing what is working — and what is not. DISCIPLINE.AI provides the <b>Reality Check</b>.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
@@ -127,7 +127,7 @@ export default function Home() {
                 <SystemPoint
                   icon={BrainCircuit}
                   title="NLP AI Log Processor"
-                  desc="Just text: '2h Polity reading'. In 5 seconds, our AI maps it to your syllabus, calculates Mastery Points, and updates your Dashboard."
+                  desc="Just text: 'Subject – Topic – Duration'. Example: 'Polity – DPSP – 2 hours'. In 5 seconds, our AI maps it to your syllabus, calculates Mastery Points, and updates your Dashboard."
                 />
                 <SystemPoint
                   icon={Zap}
@@ -214,12 +214,14 @@ export default function Home() {
             <PricingCard
               title={siteConfig.pricing.standard.name}
               price={siteConfig.pricing.standard.amount}
+              originalAmount={siteConfig.pricing.standard.originalAmount}
               features={siteConfig.pricing.standard.features}
               btnText="START FREE TRIAL"
             />
             <PricingCard
               title={siteConfig.pricing.elite.name}
               price={siteConfig.pricing.elite.amount}
+              originalAmount={siteConfig.pricing.elite.originalAmount}
               isElite
               features={siteConfig.pricing.elite.features}
               btnText="STEP INTO THE 1%"
@@ -252,10 +254,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-grid-white opacity-20"></div>
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <h2 className="text-5xl md:text-8xl font-black text-white mb-10 tracking-tighter leading-none">
-            7 DAYS OF <br />
-            <span className="text-primary italic">TOTAL DISCIPLINE.</span>
+            14 DAYS FREE <br />
+            <span className="text-primary italic">ELITE TRIAL.</span>
           </h2>
-          <p className="text-2xl text-zinc-400 mb-12 font-medium">Free trial. No credit card. Just results.</p>
+          <p className="text-2xl text-zinc-400 mb-12 font-medium">Free version available for lifetime. No credit card. Just results.</p>
           <Link
             href={siteConfig.links.whatsapp}
             className="inline-flex items-center justify-center px-16 py-6 text-2xl font-black text-black bg-primary rounded-3xl hover:bg-cyan-400 transition-all shadow-2xl hover:scale-110 active:scale-95 transform duration-300"
@@ -265,7 +267,7 @@ export default function Home() {
           <p className="mt-8 text-zinc-500 font-bold uppercase tracking-widest text-[10px]">Setup in 30 seconds</p>
         </div>
       </section>
-    </div>
+    </div >
   );
 }
 
@@ -296,7 +298,7 @@ function EliteHook({ index, icon: Icon, title, desc, color }: { index: string, i
   );
 }
 
-function PricingCard({ title, price, features, btnText, isElite = false }: { title: string, price: string, features: string[], btnText: string, isElite?: boolean }) {
+function PricingCard({ title, price, originalAmount, features, btnText, isElite = false }: { title: string, price: string, originalAmount?: string, features: string[], btnText: string, isElite?: boolean }) {
   return (
     <div className={`p-10 rounded-[2.5rem] flex flex-col relative transition-all duration-500 ${isElite
       ? "bg-black border border-primary/50 scale-110 z-20 shadow-[0_0_80px_-20px_rgba(6,182,212,0.4)]"
@@ -308,6 +310,11 @@ function PricingCard({ title, price, features, btnText, isElite = false }: { tit
       <h3 className={`text-2xl font-black mb-2 ${isElite ? "text-primary" : "text-white"}`}>{title}</h3>
       <div className="flex items-baseline mb-8">
         <span className="text-5xl font-black text-white">{price}</span>
+        {originalAmount && (
+          <span className="text-2xl font-bold text-zinc-500 line-through decoration-red-500/80 decoration-2 ml-3 opacity-60">
+            {originalAmount}
+          </span>
+        )}
         <span className="text-zinc-500 ml-2 font-bold uppercase tracking-widest text-[10px]">/mo</span>
       </div>
       <ul className="space-y-5 mb-12 flex-1">

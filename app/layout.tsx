@@ -32,6 +32,7 @@ export const metadata: Metadata = {
   verification: {
     google: "google-site-verification=YOUR_CODE", //TODO: Add actual code
   },
+  keywords: ["disciplineAI", "discipline ai", "discipline - ai", "upsc", "study tracker", "preparation mirror", "competitive exams", "test prep", "productivity"],
 };
 
 export default function RootLayout({
